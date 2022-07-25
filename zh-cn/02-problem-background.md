@@ -2,7 +2,7 @@
 
 > 作者: 潘深练
 >
-> 更新: 2022-07-24
+> 更新: 2022-07-25
 
 ## 前言
 
@@ -24,25 +24,17 @@
 
 ## 问题与挑战
 
-![](../_media/image/02-problem-background/bg-001.png)
-
 ### 终端成本高
 
 玩家购买高端主机设备来适应游戏不断提升的硬件要求，极大程度地加重了玩家成本
-
-![](../_media/image/02-problem-background/bg-002.png)
 
 ### 游戏包越来越大，下载安装成本高
 
 游戏画面越来越精细的同时也带来了不断膨胀的游戏包体，给游戏存储与推广都带来了更大的压力和成本
 
-![](../_media/image/02-problem-background/bg-003.png)
-
 ### 游戏无法在多种终端间自由切换
 
 各类终端（PC、主机、手机）上的游戏内容往往是无法共享的，玩家的体验方式也被锁定在了单一的环境里
-
-![](../_media/image/02-problem-background/bg-004.png)
 
 ### 外挂和破解程序多
 
@@ -101,4 +93,10 @@
 ## 参考
 
 - [阿里云 - 云游戏平台](https://www.aliyun.com/product/industryengine/cloudgamingplatform)
-- [阿里云 - 云游戏平台 - 产品文档](https://help.aliyun.com/document_detail/176360.html)
+
+- [腾讯云 - 云游戏平台](https://cloud.tencent.com/product/gs)
+
+- [华为云 - 云游戏平台](https://www.huaweicloud.com/solution/gamecloud/)
+
+
+

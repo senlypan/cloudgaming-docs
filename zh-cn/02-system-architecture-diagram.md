@@ -1,16 +1,16 @@
-# 系统架构图
+# 系统架构
 
 > 作者: 潘深练
 >
-> 更新: 2022-07-24
+> 更新: 2022-07-25
 
-## 前言
-
-
-![](../_media/image/02-problem-background/solution-001.png)
+## 系统架构
 
 
-云游戏平台模仿阿里云-[云游戏 PaaS 平台](https://www.aliyun.com/product/industryengine/cloudgamingplatform) 搭建，涵盖三大功能，分别是运营中心、内容中心和管控中心，主要功能模块如下：
+![](../_media/image/02-problem-background/cloudgaming-architecture-001.png)
+
+
+云游戏平台涵盖三大功能，分别是运营中心、内容中心和管控中心，主要功能模块如下：
 
 - **运营中心**：定位于游戏的运营管理，帮助您完成账号权限管理和运营资源管理。
     - **主要挑战**：安全机制、鉴权、数据分析
@@ -22,12 +22,29 @@
     - **主要挑战**：性能、调度策略、基础设施
 
 
-## 系统架构
-
-
-
-## 产品需求计划
-
-详见[腾讯文档 - 云游戏平台产品需求计划](https://docs.qq.com/sheet/DV25td0JHUEVFYk5T)
-
 ## 参考
+
+### 阿里云云游戏平台架构
+
+- [详见 | 阿里云云游戏平台架构](https://www.aliyun.com/product/industryengine/cloudgamingplatform)
+
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-alicloud.png)
+
+
+### 腾讯云云游戏平台架构
+
+- [详见 | 腾讯云云游戏平台架构](https://cloud.tencent.com/product/gs)
+
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-tencentcloud.png)
+
+
+### 华为云云游戏平台架构
+
+- [详见 | 华为云云游戏平台架构](https://www.huaweicloud.com/solution/gamecloud/)
+
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-huaweicloud.png)
+
+
+
+
+
