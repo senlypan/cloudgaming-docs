@@ -1,5 +1,7 @@
 # 问题背景
 
+![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-problem-background&left_color=blue&right_color=red)
+
 > 作者: 潘深练
 >
 > 更新: 2022-07-25
@@ -100,7 +102,7 @@
         - 全国高性能服务节点与高效调度策略，多维度降低成本
 
 
-## 参考
+## 参考资料
 
 - [Wikipedia - Cloud gaming](https://en.wikipedia.org/wiki/Cloud_gaming)
 

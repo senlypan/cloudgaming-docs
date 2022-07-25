@@ -1,5 +1,7 @@
 # 详细设计
 
+![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.03-detailed-design&left_color=blue&right_color=red)
+
 > 作者: 潘深练
 >
 > 更新: 2022-07-25
