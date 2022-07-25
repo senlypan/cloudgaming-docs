@@ -64,17 +64,12 @@
 
 ## 应用场景
 
-![](../_media/image/02-problem-background/scen-001.png)
-
 ### 游戏内容商，游戏渠道
 
 - 便捷试玩，提高推广效率
 - 跨端体验，覆盖更多场景
 - 即点即玩，免除游戏下载
 - 免除外挂干扰，创造公平竞技环境
-
-
-![](../_media/image/02-problem-background/scen-002.png)
 
 ### 运营商
 
@@ -86,16 +81,8 @@
 
 
 
-## 解决方案技术架构及优势
 
-![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.svg)
-
-
-详见 [ProcessOn - 云游戏平台系统架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
-
-!> 图片预览效果不佳，具体请打开以上详细链接
-
-### 解决方案优势
+## 解决方案优势
 
 - 之于用户
     - 低延迟高画质

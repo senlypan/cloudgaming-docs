@@ -4,10 +4,10 @@
 >
 > 更新: 2022-07-25
 
-## 系统架构
+## 云游戏平台系统架构概览
 
 
-![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.svg)
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.jpg)
 
 
 详见 [ProcessOn - 云游戏平台系统架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
