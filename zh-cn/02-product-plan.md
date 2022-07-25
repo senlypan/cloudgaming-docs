@@ -10,7 +10,7 @@
 
 !> 预览效果不佳，具体请打开以上详细链接
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:10000px;" 
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:100%; height:4600px;" 
 src="https://docs.qq.com/sheet/DV25td0JHUEVFYk5T"></iframe>
 
 

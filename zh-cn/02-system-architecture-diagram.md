@@ -7,7 +7,12 @@
 ## 系统架构
 
 
-![](../_media/image/02-problem-background/cloudgaming-architecture-001.png)
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.svg)
+
+
+详见 [ProcessOn - 云游戏平台系统架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
+
+!> 图片预览效果不佳，具体请打开以上详细链接
 
 
 云游戏平台涵盖三大功能，分别是运营中心、内容中心和管控中心，主要功能模块如下：
@@ -19,8 +24,7 @@
     - **主要挑战**：对象存储、性能、业务复杂性
 
 - **管控中心**：定位于游戏调度管理和游戏运维监控，通过认证、调度和运维管理，帮助您快捷接入云游戏PaaS服务，保障您的业务发展范围内都能得到优质服务，提高业务扩张能力。
-    - **主要挑战**：性能、调度策略、基础设施
-
+    - **主要挑战**：性能、调度策略、基础设施 
 
 ## 参考
 
@@ -43,6 +47,13 @@
 - [详见 | 华为云云游戏平台架构](https://www.huaweicloud.com/solution/gamecloud/)
 
 ![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-huaweicloud.png)
+
+
+### 百度智能云云游戏平台架构
+
+- [详见 | 百度智能云云游戏平台架构](https://cloud.baidu.com/solution/game/cloudgame.html)
+
+![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-baiducloud.png)
 
 
 
