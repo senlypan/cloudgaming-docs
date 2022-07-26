@@ -102,17 +102,3 @@
         - 全国高性能服务节点与高效调度策略，多维度降低成本
 
 
-## 参考资料
-
-- [Wikipedia - Cloud gaming](https://en.wikipedia.org/wiki/Cloud_gaming)
-
-- [阿里云 - 云游戏平台](https://www.aliyun.com/product/industryengine/cloudgamingplatform)
-
-- [腾讯云 - 云游戏平台](https://cloud.tencent.com/product/gs)
-
-- [华为云 - 云游戏平台](https://www.huaweicloud.com/solution/gamecloud/)
-
-- [百度智能云 - 云游戏平台](https://cloud.baidu.com/solution/game/cloudgame.html)
-
-
-

@@ -12,6 +12,7 @@
   * [业务流程](/zh-cn/02-business-flow-chart.md)
   * [场景用例](/zh-cn/02-use-case-diagram.md)
   * [文档说明](/zh-cn/02-document-description.md)
+  * [组织协同](/zh-cn/02-organizational-collaboration.md)
 
 * 三、解决方案
 
