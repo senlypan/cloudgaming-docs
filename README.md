@@ -12,6 +12,34 @@
 
 此份指南，记录云游戏平台的搭建过程，以便复用。
 
+## 本地安装
+
+1. 下载项目
+
+```bash
+    git clone https://github.com/senlypan/cloudgaming-docs
+```
+
+2. 推荐全局安装 `docsify-cli` 工具，可以方便地创建及在本地预览生成的文档。
+
+```bash
+    npm i docsify-cli -g
+```
+
+3. 启动项目
+
+```bash
+    docsify s
+```
+
+启动成功！
+
+```bash
+    Serving D:\project\GitHub\docs\cloudgaming-docs now.
+    Listening at http://localhost:3000
+```
+
+
 ## 参考资料
 
 除了自身的经验与思考，本指南参考了以下资料，推荐阅读：
@@ -28,4 +56,4 @@
 
 
 ***
-Powered by docsify
+Powered by [docsify](https://docsify.js.org/)

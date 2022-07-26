@@ -2,7 +2,7 @@
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-problem-background&left_color=blue&right_color=red)
 
-> 作者: 潘深练
+> 作者: 一组
 >
 > 更新: 2022-07-25
 
