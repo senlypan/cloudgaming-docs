@@ -5,6 +5,9 @@
 > 作者: 大厂一组
 >
 > 更新: 2022-07-25
+## 支付计费模块细化
+
+![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
 
 ### ⛔抱歉，内容未梳理完成
 
