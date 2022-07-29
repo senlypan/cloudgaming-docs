@@ -8,9 +8,7 @@
 
 云游戏平台搭建指南，目前支持 `中文` 语言阅读。
 
-在以往做过的许多项目中，我们常常遗忘一些设计细节、规划思路、效率工具以及失败/成功经验，为方便自己在未来开启的每一个新项目，有必要把实施路径记录详尽，或许可能，减少时间成本，提升时间过程量，提高时间结果量。
-
-此份指南，记录云游戏平台的搭建过程，以便复用。
+此份指南，记录云游戏平台的搭建过程，涉及设计细节、规划思路、效率工具以及失败/成功经验，以便复用。
 
 ## 本地安装
 
@@ -39,6 +37,9 @@
     Listening at http://localhost:3000
 ```
 
+4. 浏览器输入 `http://localhost:3000` 
+
+![](../_media/image/readme/success-001.png)
 
 ## 参考资料
 
@@ -53,7 +54,15 @@
 
 - [百度智能云 - 云游戏平台架构](https://cloud.baidu.com/solution/game/cloudgame.html)
 
+- [GamingAnywhere - 开源云游戏框架](http://gaminganywhere.org/index.html)
 
+- [阿里云 - 最佳实践 - 轻量级GPU部署云游戏](https://bp.aliyun.com/detail/76)
+
+- [阿里云 - 最佳实践 - 游戏业务分区合服](https://bp.aliyun.com/detail/66)
+
+- [阿里云 - 最佳实践 - 基于函数计算的游戏打包](https://bp.aliyun.com/detail/187)
+
+- [阿里云 - 最佳实践 - S级游戏多地域批量开服](https://bp.aliyun.com/detail/305)
 
 ***
 Powered by [docsify](https://docsify.js.org/)
