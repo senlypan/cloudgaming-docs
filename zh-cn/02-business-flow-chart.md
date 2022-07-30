@@ -15,9 +15,9 @@
 !> 预览效果不佳，具体请打开以上详细链接
 
 
-## 基础流程
+## 运营中心流程
 
-### 账号管理流程
+### 账号管理
 
 ![](../_media/image/02-business-flow-chart/account-manage.jpg)
 
@@ -25,6 +25,27 @@
 
 !> 预览效果不佳，具体请打开以上详细链接
 
+### 支付计费
+
+`待补充`
+
+![data_analysis](../_media/image/03-outline-design/data_analysis.png)
+
+### 数据分析
+
+`待补充`
+
+![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
+
+## 内容中心流程
+
+`待补充`
+
+## 管控中心流程
+
+`待补充`
+
+## 延伸流程
 
 ### 游戏微端整体业务流程
 
