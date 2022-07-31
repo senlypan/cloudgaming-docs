@@ -8,7 +8,7 @@
 * 二、问题定义
 
   * [问题背景](/zh-cn/02-problem-background.md)
-  * [系统架构](/zh-cn/02-system-architecture-diagram.md)
+  * [产品架构](/zh-cn/02-production-architecture-diagram.md)
   * [需求计划](/zh-cn/02-product-plan.md)
   * [业务流程](/zh-cn/02-business-flow-chart.md)
   * [场景用例](/zh-cn/02-use-case-diagram.md)
@@ -16,6 +16,7 @@
 
 * 三、解决方案
 
+  * [技术架构](/zh-cn/02-tech-architecture-diagram.md)
   * [概要设计](/zh-cn/03-outline-design.md)
   * [详细设计](/zh-cn/03-detailed-design.md)
   * [实施计划](/zh-cn/03-construction-plan.md)

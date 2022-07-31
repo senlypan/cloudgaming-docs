@@ -1,4 +1,4 @@
-# 系统架构
+# 产品架构
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-system-architecture-diagram&left_color=blue&right_color=red)
 
@@ -6,13 +6,13 @@
 >
 > 更新: 2022-07-25
 
-## 云游戏平台系统架构概览
+## 云游戏平台产品架构概览
 
 
 ![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.jpg)
 
 
-详见 [ProcessOn - 云游戏平台系统架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
+详见 [ProcessOn - 云游戏平台产品架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
 
 !> 图片预览效果不佳，具体请打开以上详细链接
 

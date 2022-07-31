@@ -29,13 +29,13 @@
 
 `待补充`
 
-![data_analysis](../_media/image/03-outline-design/data_analysis.png)
+![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
 
 ### 数据分析
 
 `待补充`
 
-![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
+![data_analysis](../_media/image/03-outline-design/data_analysis.png)
 
 ## 内容中心流程
 
