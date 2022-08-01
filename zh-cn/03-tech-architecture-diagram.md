@@ -1,4 +1,4 @@
-# 技术架构
+# 技术架构设计
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-tech-architecture-diagram&left_color=blue&right_color=red)
 

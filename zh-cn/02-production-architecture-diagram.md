@@ -1,4 +1,4 @@
-# 产品架构
+# 功能性架构设计
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-system-architecture-diagram&left_color=blue&right_color=red)
 
