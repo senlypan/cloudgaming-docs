@@ -9,9 +9,6 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
 
-
-![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
-
 ## 数据分析
 
 ![data_analysis](../_media/image/03-outline-design/data_analysis.png)
