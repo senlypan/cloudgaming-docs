@@ -6,7 +6,7 @@
 >
 > 更新: 2022-07-25
 
-## 云游戏平台基础流程图
+## 云游戏平台整体流程
 
 ![](../_media/image/02-business-flow-chart/business-flow-chart-001.jpg)
 
@@ -15,6 +15,43 @@
 !> 预览效果不佳，具体请打开以上详细链接
 
 
+## 运营中心流程
+
+### 账号管理
+
+![](../_media/image/02-business-flow-chart/account-manage.jpg)
+
+详见 [ProcessOn - 云游戏平台运营中心之账号管理流程图](https://www.processon.com/view/link/62e3a54be401fd0727abb34c)
+
+!> 预览效果不佳，具体请打开以上详细链接
+
+### 支付计费
+
+`待补充`
+
+![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
+
+### 数据分析
+
+`待补充`
+
+![data_analysis](../_media/image/03-outline-design/data_analysis.png)
+
+## 内容中心流程
+
+`待补充`
+
+## 管控中心流程
+
+`待补充`
+
+## 延伸流程
+
+### 游戏微端整体业务流程
+
+![](../_media/image/02-business-flow-chart/sdk-deploy-001.png)
+
+参考 [腾讯云 - 游戏微端](https://cloud.tencent.com/document/product/1162/66701)
 
 
 
