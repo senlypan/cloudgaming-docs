@@ -21,6 +21,10 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-002.jpg)
 
+### 支付计费模块拆分出基础服务
+
+![](../_media/image/03-outline-design/pay-charge-detail-003.jpg)
+
 ### 数据分析
 
 ![data_analysis](../_media/image/03-outline-design/data_analysis.png)
