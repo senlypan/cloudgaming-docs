@@ -12,7 +12,7 @@
 ![](../_media/image/02-system-architecture-diagram/cloudgaming-architecture-001.jpg)
 
 
-详见 [ProcessOn - 云游戏平台产品架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
+详见 [ProcessOn - 云游戏平台功能性架构](https://www.processon.com/view/link/62de672e1efad42d76a068a1)
 
 !> 图片预览效果不佳，具体请打开以上详细链接
 
@@ -29,6 +29,28 @@
     - **主要挑战**：性能、调度策略、基础设施 
 
 ## 基础架构
+
+### 运营中心
+
+#### 账号管理
+
+`待补充`
+
+#### 支付计费
+
+![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
+
+#### 数据分析
+
+![data_analysis](../_media/image/03-outline-design/data_analysis.png)
+
+### 内容中心
+
+`待补充`
+
+### 管控中心
+
+`待补充`
 
 ### 游戏打包业务架构参考
 
