@@ -5,6 +5,7 @@
   * [文档指南](/zh-cn/README.md)
   * [组织协同](/zh-cn/01-organizational-collaboration.md)
   * [规划指导](/zh-cn/01-guiding-ideology.md)
+  * [项目计划](/zh-cn/01-project-plan.md)
 
 * 二、问题定义
 
