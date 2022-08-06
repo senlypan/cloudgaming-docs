@@ -17,13 +17,18 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-001.jpg)
 
-### 支付计费模块依赖分层
-
-![](../_media/image/03-outline-design/pay-charge-detail-002.jpg)
 
 ### 支付计费模块拆分出基础服务
 
 ![](../_media/image/03-outline-design/pay-charge-detail-003.jpg)
+
+### 支付计费模块业务主流程图-购买资源
+
+![](../_media/image/03-outline-design/pay-charge-detail-004.jpg)
+
+### 支付计费技术依赖分层
+
+![](../_media/image/03-outline-design/pay-charge-detail-002.jpg)
 
 ### 数据分析
 
