@@ -18,7 +18,8 @@
 
 * 三、解决方案
 
-  * [技术架构设计](/zh-cn/02-tech-architecture-diagram.md)
+  * [技术架构设计](/zh-cn/03-tech-architecture-diagram.md)
   * [概要设计](/zh-cn/03-outline-design.md)
   * [详细设计](/zh-cn/03-detailed-design.md)
   * [实施计划](/zh-cn/03-construction-plan.md)
+  * [服务器选型](/zh-cn/03-server-selection.md)
