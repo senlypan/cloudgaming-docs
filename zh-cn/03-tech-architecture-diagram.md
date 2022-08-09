@@ -6,9 +6,14 @@
 >
 > 更新: 2022-07-31
 
-### ⛔抱歉，内容未梳理完成
-?> ❤️ 您也可以参与梳理，快来提交 [PR](https://github.com/senlypan/cloudgaming-docs/pulls) 或 [issue](https://github.com/senlypan/cloudgaming-docs/issues) 吧~
+## 运营中心
 
+### 数据分析
 
+#### 数据分析技术架构
 
+![data_analyze_framework](../_media/image/03-outline-design/data_analyze_framework.png)
 
+#### 数据分析开发流程
+
+![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)

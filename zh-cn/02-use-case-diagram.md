@@ -20,6 +20,14 @@
 
 ### 支付计费
 
+#### 资源池
+
+![](../_media/image/02-use-case-diagram/resource.jpg)
+
+#### 计费规则
+
+![](../_media/image/02-use-case-diagram/charge.jpg)
+
 `待补充`
 
 ### 数据分析

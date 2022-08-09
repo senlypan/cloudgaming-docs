@@ -46,7 +46,7 @@
 
 ### 内容中心
 
-`待补充`
+![msg_analysis](../_media/image/03-outline-design/msg_analysis.png)
 
 ### 管控中心
 
