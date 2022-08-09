@@ -22,9 +22,6 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-003.jpg)
 
-### 支付计费模块业务主流程图-购买资源
-
-![](../_media/image/03-outline-design/pay-charge-detail-004.jpg)
 
 ### 支付计费技术依赖分层
 

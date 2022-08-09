@@ -27,7 +27,9 @@
 
 ### 支付计费
 
-`待补充`
+#### 支付计费模块业务主流程图-购买资源
+
+![](../_media/image/02-business-flow-chart/pay-charge-001.jpg)
 
 ### 数据分析
 
