@@ -5,15 +5,15 @@
   * [文档指南](/zh-cn/README.md)
   * [组织协同](/zh-cn/01-organizational-collaboration.md)
   * [规划指导](/zh-cn/01-guiding-ideology.md)
-  * [项目计划](/zh-cn/01-project-plan.md)
+  * [里程碑](/zh-cn/01-project-plan.md)
+  * [项目规划](/zh-cn/01-product-plan.md)
 
 * 二、问题定义
 
   * [问题背景](/zh-cn/02-problem-background.md)
-  * [功能性架构](/zh-cn/02-production-architecture-diagram.md)
+  * [产品架构](/zh-cn/02-production-architecture-diagram.md)
   * [业务流程](/zh-cn/02-business-flow-chart.md)
   * [场景用例](/zh-cn/02-use-case-diagram.md)
-  * [需求计划](/zh-cn/02-product-plan.md)
   * [说明文档](/zh-cn/02-document-description.md)
 
 * 三、解决方案
