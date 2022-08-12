@@ -42,7 +42,11 @@
 ![](../_media/image/readme/success-001.png)
 
 
-!> 🤖 本文档依赖 Jenkins 定时发布 ⏰ ，与 Github 仓库保持最多 10 分钟的时延
+## 官网更新
+
+本文档官网地址为：http://cloudgaming.panshenlian.com 
+
+由于官网文档内容依赖 Jenkins 定时发布 ⏰ ，因此与 Github 仓库会有最多 10 分钟的更新时延。
 
 
 ## 参考资料
