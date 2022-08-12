@@ -13,6 +13,11 @@
 - [Cloudcraft - 架构图设计工具](https://www.cloudcraft.co/)
 - [Emoji | XD - 表情图标工具](https://emojixd.com/)
 
+## 思维
+
+- [CSDN - 程序员必备的思维能力：抽象思维](https://blog.csdn.net/significantfrank/article/details/113798446)
+- [CSDN - 程序员的底层思维能力：逻辑思维](https://blog.csdn.net/significantfrank/article/details/119273535)
+- [CSDN - 程序员必备的思维能力：结构化思维](https://blog.csdn.net/significantfrank/article/details/116525195)
 
 ## 周会
 

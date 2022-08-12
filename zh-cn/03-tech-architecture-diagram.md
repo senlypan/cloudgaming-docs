@@ -17,6 +17,10 @@
 !> 图片预览效果不佳，具体请打开以上详细链接
 
 
+### 架构参考
+
+- [CSDN - COLA 4.0：应用架构的最佳实践](https://blog.csdn.net/significantfrank/article/details/110934799)
+
 ## 运营中心
 
 ### 数据分析
