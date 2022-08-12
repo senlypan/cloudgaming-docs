@@ -6,6 +6,17 @@
 >
 > 更新: 2022-07-31
 
+
+## 云游戏平台技术架构
+
+![](../_media/image/03-tech-architecture-diagram/cloudgaming-architecture-001.jpg)
+
+
+详见 [ProcessOn - 云游戏平台技术架构](https://www.processon.com/view/link/62f6046de401fd071516901b)
+
+!> 图片预览效果不佳，具体请打开以上详细链接
+
+
 ## 运营中心
 
 ### 数据分析
@@ -17,3 +28,13 @@
 #### 数据分析开发流程
 
 ![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)
+
+
+
+## 内容中心
+
+`待补充`
+
+## 管控中心
+
+`待补充`
