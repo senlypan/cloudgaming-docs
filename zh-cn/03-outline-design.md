@@ -11,7 +11,7 @@
 
 ### 账号管理
 
-`待补充`
+![](../_media/image/03-outline-design/account-detail.jpg)
 
 ### 支付计费模块细化
 
