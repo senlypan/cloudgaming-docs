@@ -38,7 +38,21 @@
 
 ### 数据分析
 
-`待补充`
+排队数据
+
+![queueup](../_media/image/02-use-case-diagram/queueup.png)
+
+并发数据
+
+![concurrent](../_media/image/02-use-case-diagram/concurrent.png)
+
+体验数据
+
+![experience](../_media/image/02-use-case-diagram/experience.png)
+
+运营数据
+
+![operate](../_media/image/02-use-case-diagram/operate.png)
 
 ## 内容中心用例
 
