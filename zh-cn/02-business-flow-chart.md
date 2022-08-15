@@ -34,7 +34,7 @@
 
 #### 支付计费合同中心-创建于取消
 
-![](../_media/image/02-business-flow-chart/pay-charge-001.jpg)
+![](../_media/image/02-business-flow-chart/pay-charge-002-contract.jpg)
 
 ### 数据分析
 
