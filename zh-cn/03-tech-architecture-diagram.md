@@ -44,11 +44,10 @@
 
 
 ## 参考
-- [51CTO - 微服务架构的理论基础 - 康威定律](https://blog.51cto.com/u_14145398/5166844)
 
 - [阿里云 - 微服务架构的理论基础 - 康威定律](https://blog.51cto.com/u_14145398/5166844)
 
-- [博客园 - C4 模型 - 可视化架构设计](https://www.cnblogs.com/lex-wu/p/13305380.html)
+- [InfoQ - 用于软件架构的 C4 模型](https://www.infoq.cn/article/C4-architecture-model/)
 
 - [阿里云 - 运用RUP 4+1视图方法进行软件架构设计](https://www.cnblogs.com/lex-wu/p/13305380.html)
 
