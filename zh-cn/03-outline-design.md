@@ -27,6 +27,10 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-002.jpg)
 
+### 支付计费模块-资源管理，计费规则，计费管控数据模型
+
+![](../_media/image/03-outline-design/pay-charge-data-model-001.jpg)
+
 ### 数据分析
 
 ![data_analysis](../_media/image/03-outline-design/data_analysis.png)
