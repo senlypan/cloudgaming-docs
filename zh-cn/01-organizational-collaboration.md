@@ -11,6 +11,13 @@
 - [腾讯文档 - 文档共享工具](https://docs.qq.com/desktop)
 - [ProcessOn - 制图共享工具](https://www.processon.com/)
 - [Cloudcraft - 架构图设计工具](https://www.cloudcraft.co/)
+- [Emoji | XD - 表情图标工具](https://emojixd.com/)
+
+## 思维
+
+- [CSDN - 程序员必备的思维能力：抽象思维](https://blog.csdn.net/significantfrank/article/details/113798446)
+- [CSDN - 程序员的底层思维能力：逻辑思维](https://blog.csdn.net/significantfrank/article/details/119273535)
+- [CSDN - 程序员必备的思维能力：结构化思维](https://blog.csdn.net/significantfrank/article/details/116525195)
 
 ## 周会
 
@@ -31,6 +38,8 @@
 
 
 - **阶段二**
+    - 2022-08-12 周五
+        - [20220812-阶段一-云游戏平台任务分工+技术架构-周五.mp4](https://share.weiyun.com/6zo29Mz7)
     - 2022-08-09 周二
         - [20220809-阶段二-云游戏平台需求确认+技术架构沟通-周二（上）.mp4](https://yunpan.360.cn/surl_y8rIHaxxKBg)
         - [20220809-阶段二-云游戏平台需求确认+技术架构沟通-周二（下）.mp4](https://yunpan.360.cn/surl_y8rILJwCQT3)
