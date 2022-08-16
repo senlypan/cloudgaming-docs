@@ -40,9 +40,8 @@
 
 - **阶段二**
     - 2022-08-16 周二
-    主题: 俞袁建的快速会议
-    日期: 2022-08-16 21:04:38
-    录制文件：https://meeting.tencent.com/v2/cloud-record/share?id=bfd82588-7dd5-4fcd-9280-186570b923f9&from=3
+        - [20220816-阶段二-云游戏平台任务分工+技术架构-周二.mp4](https://meeting.tencent.com/v2/cloud-record/share?id=bfd82588-7dd5-4fcd-9280-186570b923f9&from=3)
+        密码：ZE8F
     - 2022-08-12 周五
         - [20220812-阶段一-云游戏平台任务分工+技术架构-周五.mp4](https://share.weiyun.com/6zo29Mz7)
     - 2022-08-09 周二
