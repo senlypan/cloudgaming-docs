@@ -2,7 +2,7 @@
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.03-detailed-design&left_color=blue&right_color=red)
 
-> 作者: 大厂一组
+> 作者: 大厂研究员
 >
 > 更新: 2022-07-25
 
