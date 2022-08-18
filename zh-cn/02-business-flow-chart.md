@@ -2,7 +2,7 @@
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-business-flow-chart&left_color=blue&right_color=red)
 
-> 创建：大厂一组
+> 创建：大厂研究员
 >
 > 更新: 2022-07-25
 

@@ -2,7 +2,7 @@
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-organizational-collaboration&left_color=blue&right_color=red)
 
-> 作者: 大厂一组
+> 作者: 大厂研究员
 >
 > 更新: 2022-07-26
 
@@ -12,7 +12,7 @@
 - [ProcessOn - 制图共享工具](https://www.processon.com/)
 - [Cloudcraft - 架构图设计工具](https://www.cloudcraft.co/)
 - [Emoji | XD - 表情图标工具](https://emojixd.com/)
-- [StarUML ](https://staruml.io)
+- [StarUML](https://staruml.io)
 
 ## 思维
 
