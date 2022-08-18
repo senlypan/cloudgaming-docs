@@ -22,6 +22,8 @@
 
 ## 运营中心
 
+
+
 ### 数据分析
 
 #### 数据分析技术架构
@@ -32,8 +34,13 @@
 
 ![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)
 
+### 中间件
+#### 任务调度 xxl-job架构
+![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
 
-
+#### 自动化构建测试发布
+##### 流程
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
 ## 内容中心
 
 `待补充`
