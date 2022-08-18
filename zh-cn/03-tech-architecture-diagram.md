@@ -1,4 +1,4 @@
-# 技术架构设计
+# 系统架构设计
 
 ![访问统计](https://visitor-badge.glitch.me/badge?page_id=senlypan.cloudgaming.02-tech-architecture-diagram&left_color=blue&right_color=red)
 
@@ -10,7 +10,7 @@
 
 ### 📖 定义
 
-技术架构，一般指后端的逻辑架构，又叫 “系统架构” 或 “后端架构”。
+系统架构，一般指后端的逻辑架构，又叫 “技术架构” 或 “后端架构”。
 
 ### 🌏 使用场景
 
@@ -36,7 +36,7 @@
 ![](../_media/image/03-tech-architecture-diagram/demo-003.jpg)
 
 
-## 云游戏平台技术架构
+## 云游戏平台系统架构
 
 ![](../_media/image/03-tech-architecture-diagram/cloudgaming-architecture-001.jpg)
 
@@ -76,7 +76,7 @@
 
 - [博客园 - C4 模型 - 可视化架构设计 ](https://www.cnblogs.com/lex-wu/p/13305380.html)
 
-- [极客专栏 - 如何画好架构图](https://u.geekbang.org/lesson/381) 👍👍👍
+- [极客专栏 - 如何画好架构图](https://u.geekbang.org/lesson/381) 📽️📽️📽️
 
 - [阿里云 - 运用RUP 4+1视图方法进行软件架构设计](https://developer.aliyun.com/article/458980)
 

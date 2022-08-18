@@ -18,7 +18,7 @@
 
 * 三、解决方案
 
-  * [技术架构](/zh-cn/03-tech-architecture-diagram.md)
+  * [系统架构](/zh-cn/03-tech-architecture-diagram.md)
   * [应用架构](/zh-cn/03-application-architecture-diagram.md)
   * [部署架构](/zh-cn/03-deployment-architecture-diagram.md)
   * [概要设计](/zh-cn/03-outline-design.md)

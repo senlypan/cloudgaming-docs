@@ -62,6 +62,10 @@
 
 - [百度智能云 - 云游戏平台架构](https://cloud.baidu.com/solution/game/cloudgame.html)
 
+- [阿里云 - 云原生游戏最佳实践系列直播：游戏玩家服容器化的困境与解法](https://yqh.aliyun.com/live/detail/29339)📽️📽️📽️
+
+- [OpenKruise - 一个基于 Kubernetes 的扩展套件，主要聚焦于云原生应用的自动化，比如 部署、发布、运维以及可用性防护](https://openkruise.io/zh/)
+
 - [GamingAnywhere - 开源云游戏框架](http://gaminganywhere.org/index.html)
 
 - [阿里云 - 最佳实践 - 轻量级GPU部署云游戏](https://bp.aliyun.com/detail/76)
