@@ -29,4 +29,20 @@
 
 ![](../_media/image/03-application-architecture-diagram/demo-001.jpg)
 
-## 云游戏平台应用架构
+## 运营中心-应用架构
+
+
+![](../_media/image/03-application-architecture-diagram/application-architecture-diagram-001.jpg)
+
+
+详见 [ProcessOn - 运营中心应用架构](https://www.processon.com/view/link/62fe59101efad47d124118d1)
+
+!> 图片预览效果不佳，具体请打开以上详细链接
+
+## 内容中心-应用架构
+
+`待补充`
+
+## 管控中心-应用架构
+
+`待补充`
