@@ -44,7 +44,14 @@
 
 ## 消息服务
 
-`待补充`
+#### 消息服务总体架构
+![](../_media/image/03-deployment-architecture-diagram/mq-overall-architecture.png)
+
+#### kafka集群架构
+![](../_media/image/03-deployment-architecture-diagram/kafka-architecture.png)
+
+#### rocketmq集群架构
+![](../_media/image/03-deployment-architecture-diagram/rocketmq-architecture.png)
 
 ## 文件服务
 
