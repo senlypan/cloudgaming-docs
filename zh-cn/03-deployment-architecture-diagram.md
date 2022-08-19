@@ -70,7 +70,12 @@
 ## 任务调度 xxl-job 架构
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
-
+### 部署
+![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment.jpg)
+### 任务调度
+![](../_media/image/03-tech-architecture-diagram/xxl-job-dispatch.jpg)
+### 执行器注册
+![](../_media/image/03-tech-architecture-diagram/xxl-job-executor.jpg)
 ## 分布式事务
 
 `待补充`
