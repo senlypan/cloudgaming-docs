@@ -36,7 +36,13 @@
 
 ## 云游戏平台部署架构
 
-`待补充`
+![](../_media/image/03-deployment-architecture-diagram/deployment-architecture-diagram-001.jpg)
+
+
+详见 [ProcessOn - 云游戏平台部署架构](https://www.processon.com/view/link/62ff5d350e3e7437cac1c423)
+
+!> 图片预览效果不佳，具体请打开以上详细链接
+
 
 ## 网关服务
 
