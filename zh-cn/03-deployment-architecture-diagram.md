@@ -50,7 +50,19 @@
 
 `待补充`
 
-## 任务调度
+## 日志中心
+
+`待补充`
+
+## 任务调度 xxl-job 架构
+
+![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
+
+## 分布式事务
+
+`待补充`
+
+## 触达中心
 
 `待补充`
 
@@ -74,9 +86,36 @@
 
 `待补充`
 
-## 自动化构建测试发布
+## 自动化构建测试发布流程
+
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
+
+## 监控预警
 
 `待补充`
+
+## 全链路追踪
+
+`待补充`
+
+## 熔断限流
+
+`待补充`
+
+## 性能监控平台
+
+`待补充`
+
+## 数据采集分析
+
+#### 数据分析技术架构
+
+![data_analyze_framework](../_media/image/03-outline-design/data_analyze_framework.png)
+
+#### 数据分析开发流程
+
+![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)
+
 
 
 ## 参考
