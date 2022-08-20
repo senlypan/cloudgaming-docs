@@ -51,7 +51,7 @@
 ## 消息服务
 
 #### 消息服务总体架构
-![](../_media/image/03-deployment-architecture-diagram/mq.jpg)
+![](../_media/image/03-deployment-architecture-diagram/mq-overall-architecture.png)
 
 #### kafka集群架构
 ![](../_media/image/03-deployment-architecture-diagram/kafka-architecture.png)
@@ -90,11 +90,11 @@
 
 ## mysql
 
-![redis-mysql_deployment_framework](../_media/image/03-deployment-architecture-diagram/redis-mysql_deployment_framework.png)
+`待补充`
 
 ## 缓存服务
 
-![redis-mysql_deployment_framework](../_media/image/03-deployment-architecture-diagram/redis-mysql_deployment_framework.png)
+`待补充`
 
 ## nginx
 
@@ -107,7 +107,8 @@
 ## 自动化构建测试发布流程
 
 ![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
-
+### 部署
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
 ## 监控预警
 
 `待补充`
