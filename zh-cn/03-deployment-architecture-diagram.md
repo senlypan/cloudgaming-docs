@@ -71,7 +71,7 @@
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
 ### 部署
-![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment.jpg)
+![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment-001.jpg)
 ### 任务调度
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-dispatch.jpg)
 ### 执行器注册
