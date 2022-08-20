@@ -50,8 +50,8 @@
 
 ## 消息服务
 
-#### 消息服务总体架构
-![](../_media/image/03-deployment-architecture-diagram/mq-overall-architecture.png)
+#### mq基本架构
+![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
 
 #### kafka集群架构
 ![](../_media/image/03-deployment-architecture-diagram/kafka-architecture.png)
