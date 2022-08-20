@@ -90,11 +90,11 @@
 
 ## mysql
 
-`待补充`
+![redis-mysql_deployment_framework](../_media/image/03-deployment-architecture-diagram/redis-mysql_deployment_framework.png)
 
 ## 缓存服务
 
-`待补充`
+![redis-mysql_deployment_framework](../_media/image/03-deployment-architecture-diagram/redis-mysql_deployment_framework.png)
 
 ## nginx
 
