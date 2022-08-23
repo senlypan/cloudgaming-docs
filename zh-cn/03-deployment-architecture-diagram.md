@@ -46,7 +46,49 @@
 
 ## 网关服务
 
-`待补充`
+### 技术选型
+
+互联网企业常见的方案有基于 Openresty 的 Kong、Orange，基于 Go 的 Tyk 和基于 Java 的 Zuul。
+
+| 技术项          | 概述  |
+| --------------- | ----- |
+| Zuul            | 是一种提供动态路由、监视、弹性、安全性等功能的边缘服务，Zuul 是 Netflix 出品的一个基于 JVM 路由和服务端的负载均衡器。 |
+| Tyk             | 是一个基于 Go 实现的开源 API 网关服务， Tyk 提供一个 API 管理平台，其中包括 API 网关、API 分析、开发人员门户和 API 管理面板。|
+| Kong            | Kong 是 Mashape 提供的一款 API 管理软件，它本身是基于 Nginx + Lua 的，但是比 Nginx 提供了更简单的配置方式，数据采用了 Apache Cassandra/PostgreSQL 存储并提供了一些优秀的插件，比如验证、日志、调用频率限制等。|
+| Orange          | 和 Kong 类似也是基于 OpenResty 的一个 API 网关程序。|
+| apiaxle         | Nodejs 实现的一个 API 网关。|
+| api-umbrella    | Ruby 实现的一个 API 网关。|
+
+### 选型参考
+
+| 维度     |  Zuul 1.0     | OpenResty 自建     | Kong                    | Orange                    | 
+| -----    | ---------     | -----------------  | ------------------------ | -------------------------| 
+| 效率     |  一般          |  高                | 高                      | 高                        | 
+| 开发语言 |  Java          |  Lua               | Lua                     | Lua                       | 
+| 技术栈   |  Springboot    |  Nginx + Lua       | Nginx + Lua + OpenResty | Nginx + Lua + OpenResty   |
+| 存储     |                |  Redis、Memcached  | Cassandra、PostgreSQL   | MySQL                     | 
+| 服务注册 |  Eureka、Consul |  Consul、ETCD     | Consul、ETCD             | Consul/ETCD               | 
+| 管理界面 |  内置           |  开源             | 第三方开源                | 开源                      | 
+| 社区     |  成熟           |  成熟             | 较少                     | 少，个人开发者             | 
+| 代码     |  开源           |  开源             | 开源，更新频繁            | 开源                       | 
+| 学习成本 |  一般           |  普通              | 较高                     | 较高                       | 
+| 维护成本 |  一般           |  普通              | 较高                     | 较高                       | 
+| 扩展     |  支持           |  自建              | 支持集群                  | 支持集群                  | 
+| 多节点   |  支持           |  自建              | 支持                      | 需要开发                  | 
+| 功能     |  丰富           |  自建              | 丰富，部分开源 + 商业      | 丰富                     | 
+
+### 选型权衡因素
+
+1. 权衡学习成本与维护成本，基于 Java 语言开发的 Zuul 和 SpringCloudGateWay 值得优先考虑。
+2. 权衡性能，Kong 等非 Java 语言开发的网关值得优先考虑。
+
+### 网关选型参考
+
+- [InfoQ - 天翼账号网关系统架构演进历程](https://xie.infoq.cn/article/c6703d216c43c2b522b9b4ffa)
+
+- [InfoQ - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
+
+- [博客园 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
 
 ## 消息服务
 
