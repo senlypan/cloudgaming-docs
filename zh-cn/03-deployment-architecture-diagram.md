@@ -44,7 +44,11 @@
 !> 图片预览效果不佳，具体请打开以上详细链接
 
 
-## 网关服务
+## 流量网关（Nginx）
+
+`待补充`
+
+## 网关中心
 
 ### 常见网关对比
 
@@ -172,11 +176,9 @@
 
 `待补充`
 
-## 日志中心
+## 任务调度
 
-`待补充`
-
-## 任务调度 xxl-job 架构
+### xxl-job 架构
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
 ### 部署
@@ -189,15 +191,7 @@
 
 `待补充`
 
-## 触达中心
-
-`待补充`
-
 ## 配置中心与注册中心
-
-`待补充`
-
-## mysql
 
 `待补充`
 
@@ -205,46 +199,41 @@
 
 `待补充`
 
-## nginx
+## 关系数据库服务（MySQL）
 
 `待补充`
+
+## 自动化构建测试发布服务
+
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
+### 部署
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
 
 ## 容器化部署
 
 `待补充`
 
-## 自动化构建测试发布流程
-
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
-### 部署
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
-## 监控预警
+## 日志中心
 
 `待补充`
 
-## 全链路追踪
+## 分布式事务集群
 
 `待补充`
 
-## 熔断限流
+## 大数据中心（数据采集分析）
 
-`待补充`
-
-## 性能监控平台
-
-`待补充`
-
-## 数据采集分析
-
-#### 数据分析技术架构
+### 数据分析技术架构
 
 ![data_analyze_framework](../_media/image/03-outline-design/data_analyze_framework.png)
 
-#### 数据分析开发流程
+### 数据分析开发流程
 
 ![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)
 
+## 性能监控中心（全链路追踪）
 
+`待补充` 
 
 ## 参考
 
