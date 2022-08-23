@@ -92,7 +92,14 @@
 
 ## 消息服务
 
-`待补充`
+#### mq基本架构
+![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
+
+#### kafka集群架构
+![](../_media/image/03-deployment-architecture-diagram/kafka-architecture.png)
+
+#### rocketmq集群架构
+![](../_media/image/03-deployment-architecture-diagram/rocketmq-architecture.png)
 
 ## 文件服务
 
@@ -105,7 +112,12 @@
 ## 任务调度 xxl-job 架构
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
-
+### 部署
+![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment-001.jpg)
+### 任务调度
+![](../_media/image/03-tech-architecture-diagram/xxl-job-dispatch.jpg)
+### 执行器注册
+![](../_media/image/03-tech-architecture-diagram/xxl-job-executor.jpg)
 ## 分布式事务
 
 `待补充`
@@ -137,7 +149,8 @@
 ## 自动化构建测试发布流程
 
 ![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
-
+### 部署
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
 ## 监控预警
 
 `待补充`
