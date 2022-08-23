@@ -48,9 +48,9 @@
 
 ### 常见网关对比
 
-目前常见的开源网关大致上按照语言分类有如下几类:
+> 目前常见的开源网关大致上按照语言分类有如下几类:
 
-| 语言分类        | 网关 | 
+| 语言        | 网关 | 
 | ---------------| ----- |
 | Nginx + lua    | OpenResty、Kong、Orange、Abtesting gateway 等 |
 | Java           | Zuul/Zuul2、Spring Cloud Gateway、Kaazing KWG、gravitee、Dromara soul 等 |
@@ -58,7 +58,7 @@
 | .net           | Ocelot |
 | NodeJS         | Express Gateway、Micro Gatewa |
 
-按照使用数量、成熟度等来划分，主流的有 4 个：
+> 按照使用数量、成熟度等来划分，主流的有 4 个：
 
 - **OpenResty** 
     - Nginx + Lua
