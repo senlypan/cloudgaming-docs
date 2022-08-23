@@ -90,9 +90,9 @@
 | 线程模型  | 阻塞          |                   |                         |                           | 非阻塞         |  非阻塞             | 
 | 支持Http  | ✔️           |                   |                         |                           | ✔️            |  ✔️                | 
 | 支持dubbo | ❌           |                   |                         |                           | ❌            |  ❌                | 
-| 效率     |  一般          |  高                | 高                      | 高                        |              |                      | 
-| 开发语言 |  Java          |  Lua               | Lua                     | Lua                       |               |                     | 
-| 技术栈   |  Springboot    |  Nginx + Lua       | Nginx + Lua + OpenResty | Nginx + Lua + OpenResty   |              |                      | 
+| 效率     |  一般          |  高                | 高                      | 高                        | 一般          |  一般               | 
+| 开发语言 |  Java          |  Lua               | Lua                     | Lua                       | Java         | Java                | 
+| 技术栈   |  Springboot    |  Nginx + Lua       | Nginx + Lua + OpenResty | Nginx + Lua + OpenResty   | Springboot    | Springboot         | 
 | 存储     |                |  Redis、Memcached  | Cassandra、PostgreSQL   | MySQL                     |               |                     | 
 | 服务注册 |  Eureka、Consul |  Consul、ETCD     | Consul、ETCD             | Consul/ETCD               |               |                     | 
 | 管理界面 |  内置           |  开源             | 第三方开源                | 开源                      |               |                     | 
@@ -115,6 +115,10 @@
 ### 流量与业务网关
 
 ![](../_media/image/03-deployment-architecture-diagram/gateway-002.png)
+
+### 部署架构参考
+
+![](../_media/image/03-deployment-architecture-diagram/gateway-003.png)
 
 ### 网关选型参考
 
