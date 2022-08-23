@@ -130,6 +130,25 @@
 
 ## 消息服务
 
+> 几种常用MQ对比
+
+| 维度    | ActiveMQ                       | RabbitMQ                       | RocketMQ             | Kafka              | 
+|-------|--------------------------------|--------------------------------|----------------------|-----------------| 
+| 多语言支持 | 支持，JAVA优先                      | 语言无关                           | 只支持Java              | 支持，Java优先       |
+| 单机吞吐量 | 万级                             | 万级                             | 10万级                 | 10万级              | 
+| 时效性   | ms级                            | 微秒级                            | ms级                  | ms级以内          | 
+| 持久化   | 内存、文件、数据库                      | 内存、文件，支持数据堆积，但数据堆积会影响生产速率      | 磁盘文件        | 磁盘文件，只要磁盘容量足够，可以做到无限消息堆积 | 
+| 功能支持  | MQ领域的功能极其完备                    | 基于erlang开发，所以并发能力很强，性能极其好，延时很低 | MQ功能较为完善，还是分布式的，扩展性好 | 功能较为简单，主要支持简单的MQ功能，在大数据领域的实时计算以及日志采集被大规模使用，是事实上的标准 | 
+| 可用性   | 高（主从）                          | 高（主从）                          | 非常高（分布式）             | 非常高（分布式）        | 
+| 消息丢失  | 低                              | 低                              | 非常高（分布式）             | 中              | 
+| 社区活跃度 | 高                              | 高                              | 中                    | 高              | 
+| 成熟度   | 成熟                             | 成熟                             | 比较成熟                 | 成熟日志领域         | 
+| 支持协议  | OpenWirte、Stomp、rest、amop、xmpp | AMQP                           | 自己定义的一套              |            | 
+| 事务    | 支持                             | 不支持                            | 支持                   |                | 
+| 负载均衡  | 支持                             | 支持                             | 支持                   |                | 
+| 部署方式  | 独立、嵌入                          | 独立                             | 独立                   |                | 
+
+
 #### mq基本架构
 ![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
 
@@ -138,6 +157,16 @@
 
 #### rocketmq集群架构
 ![](../_media/image/03-deployment-architecture-diagram/rocketmq-architecture.png)
+
+#### activemq集群架构
+##### 1.p2p
+![](../_media/image/03-deployment-architecture-diagram/activemq-p2p.png)
+
+##### 2.p/s
+![](../_media/image/03-deployment-architecture-diagram/activemq-ps.png)
+
+#### rabbitmq集群架构
+![](../_media/image/03-deployment-architecture-diagram/rabbitmq-architect.jpeg)
 
 ## 文件服务
 
