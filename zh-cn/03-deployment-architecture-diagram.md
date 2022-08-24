@@ -50,7 +50,7 @@
 
 > 目前常见的开源网关大致上按照语言分类有如下几类:
 
-| 语言        | 网关 | 
+| 语言           | 网关   | 
 | ---------------| ----- |
 | Nginx + lua    | OpenResty、Kong、Orange、Abtesting gateway 等 |
 | Java           | Zuul/Zuul2、Spring Cloud Gateway、Kaazing KWG、gravitee、Dromara soul 等 |
@@ -76,21 +76,22 @@
 | 技术项          | 概述  |
 | --------------- | ----- |
 | Zuul            | 是一种提供动态路由、监视、弹性、安全性等功能的边缘服务，Zuul 是 Netflix 出品的一个基于 JVM 路由和服务端的负载均衡器。 |
-| Tyk             | 是一个基于 Go 实现的开源 API 网关服务， Tyk 提供一个 API 管理平台，其中包括 API 网关、API 分析、开发人员门户和 API 管理面板。|
-| Kong            | Kong 是 Mashape 提供的一款 API 管理软件，它本身是基于 Nginx + Lua 的，但是比 Nginx 提供了更简单的配置方式，数据采用了 Apache Cassandra/PostgreSQL 存储并提供了一些优秀的插件，比如验证、日志、调用频率限制等。|
+| Gateway         | 是一种提供动态路由、监视、弹性、安全性等功能的边缘服务，Zuul 是 Netflix 出品的一个基于 JVM 路由和服务端的负载均衡器。 |
+| Kong            | Kong 是 Mashape 提供的一款 API 管理软件，它本身是基于 Nginx + Lua 的，但是比 Nginx 提供了更简单的配置方式，数据采用了 Apache Cassandra/PostgreSQL 存储并提供了一些优秀的插件，比如验证、日志、调用频率限制等。高级服务收费！|
 | Orange          | 和 Kong 类似也是基于 OpenResty 的一个 API 网关程序。|
+| Tyk             | 是一个基于 Go 实现的开源 API 网关服务， Tyk 提供一个 API 管理平台，其中包括 API 网关、API 分析、开发人员门户和 API 管理面板。|
 | apiaxle         | Nodejs 实现的一个 API 网关。|
-| api-umbrella    | Ruby 实现的一个 API 网关。|
+| apiumbrella    | Ruby 实现的一个 API 网关。|
 
 > 几种网关的对比
 
-| 维度     |  Zuul 1       | OpenResty 自建     | Kong                    | Orange                    | Zuul 2        | SpringCloudGateway | 
+| 维度     |  Zuul 1       | OpenResty         | Kong                    | Orange                    | Zuul 2        | SpringCloudGateway | 
 | -----    | ---------     | -----------------  | ------------------------ | -------------------------| -------------| --------------------| 
 | WEb容器  |  Servlet       |                   |                         |                           | Netty Server  |  WebFlux           | 
 | 线程模型  | 阻塞          |                   |                         |                           | 非阻塞         |  非阻塞             | 
 | 支持Http  | ✔️           |                   |                         |                           | ✔️            |  ✔️                | 
 | 支持dubbo | ❌           |                   |                         |                           | ❌            |  ❌                | 
-| 效率     |  一般          |  高                | 高                      | 高                        | 一般          |  一般               | 
+| 效率     |  一般          |  高                | 高                      | 高                        | 一般          |  一般，传闻 RPS 是 Zuul2 的 1.6 倍            | 
 | 开发语言 |  Java          |  Lua               | Lua                     | Lua                       | Java         | Java                | 
 | 技术栈   |  Springboot    |  Nginx + Lua       | Nginx + Lua + OpenResty | Nginx + Lua + OpenResty   | Springboot    | Springboot         | 
 | 存储     |                |  Redis、Memcached  | Cassandra、PostgreSQL   | MySQL                     |               |                     | 
@@ -102,7 +103,7 @@
 | 维护成本 |  一般           |  普通，需要维护lua脚本  | 较高，需要维护lua脚本  | 较高                       | 可维护性较差 |spring系列可扩展强，易配置 可维护性好| 
 | 扩展     |  支持           |  自建              | 支持集群                  | 支持集群                  |               |                     | 
 | 多节点   |  支持           |  自建              | 支持                      | 需要开发                  |               |                     | 
-| 功能     |  丰富           |  自建              | 丰富，部分开源 + 商业      | 丰富                     |               |                      | 
+| 功能     |  丰富           |  自建              | 丰富，部分开源 + 商业（收费）      | 丰富                     |               |                      | 
 | 服务编排  | ❌            |                    |                           |                           | ❌            |  ❌                | 
 | 限流     |                |  需要lua开发        | 根据秒，分，时，天，月，年，根据用户进行限流。可在原码的基础上进行开发 | |可以通过配置文件配置集群限流和单服务器限流亦可通过filter实现限流扩展|可以通过IP，用户，集群限流，提供了相应的接口进行扩展|
 | 鉴权     |                |  需要lua开发        | 支持普通鉴权，Key Auth鉴权，HMAC，auth2.0 | | filter中实现| 支持普通鉴权、auth2.0 | 
