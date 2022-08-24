@@ -44,7 +44,11 @@
 !> 图片预览效果不佳，具体请打开以上详细链接
 
 
-## 网关服务
+## 流量网关（Nginx）
+
+`待补充`
+
+## 网关中心
 
 ### 常见网关对比
 
@@ -131,6 +135,25 @@
 
 ## 消息服务
 
+> 几种常用MQ对比
+
+| 维度    | ActiveMQ                       | RabbitMQ                       | RocketMQ             | Kafka              | 
+|-------|--------------------------------|--------------------------------|----------------------|-----------------| 
+| 多语言支持 | 支持，JAVA优先                      | 语言无关                           | 只支持Java              | 支持，Java优先       |
+| 单机吞吐量 | 万级                             | 万级                             | 10万级                 | 10万级              | 
+| 时效性   | ms级                            | 微秒级                            | ms级                  | ms级以内          | 
+| 持久化   | 内存、文件、数据库                      | 内存、文件，支持数据堆积，但数据堆积会影响生产速率      | 磁盘文件        | 磁盘文件，只要磁盘容量足够，可以做到无限消息堆积 | 
+| 功能支持  | MQ领域的功能极其完备                    | 基于erlang开发，所以并发能力很强，性能极其好，延时很低 | MQ功能较为完善，还是分布式的，扩展性好 | 功能较为简单，主要支持简单的MQ功能，在大数据领域的实时计算以及日志采集被大规模使用，是事实上的标准 | 
+| 可用性   | 高（主从）                          | 高（主从）                          | 非常高（分布式）             | 非常高（分布式）        | 
+| 消息丢失  | 低                              | 低                              | 非常高（分布式）             | 中              | 
+| 社区活跃度 | 高                              | 高                              | 中                    | 高              | 
+| 成熟度   | 成熟                             | 成熟                             | 比较成熟                 | 成熟日志领域         | 
+| 支持协议  | OpenWirte、Stomp、rest、amop、xmpp | AMQP                           | 自己定义的一套              |            | 
+| 事务    | 支持                             | 不支持                            | 支持                   |                | 
+| 负载均衡  | 支持                             | 支持                             | 支持                   |                | 
+| 部署方式  | 独立、嵌入                          | 独立                             | 独立                   |                | 
+
+
 #### mq基本架构
 ![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
 
@@ -140,15 +163,23 @@
 #### rocketmq集群架构
 ![](../_media/image/03-deployment-architecture-diagram/rocketmq-architecture.png)
 
+#### activemq集群架构
+##### 1.p2p
+![](../_media/image/03-deployment-architecture-diagram/activemq-p2p.png)
+
+##### 2.p/s
+![](../_media/image/03-deployment-architecture-diagram/activemq-ps.png)
+
+#### rabbitmq集群架构
+![](../_media/image/03-deployment-architecture-diagram/rabbitmq-architect.jpeg)
+
 ## 文件服务
 
 `待补充`
 
-## 日志中心
+## 任务调度
 
-`待补充`
-
-## 任务调度 xxl-job 架构
+### xxl-job 架构
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
 ### 部署
@@ -161,15 +192,7 @@
 
 `待补充`
 
-## 触达中心
-
-`待补充`
-
 ## 配置中心与注册中心
-
-`待补充`
-
-## mysql
 
 `待补充`
 
@@ -177,46 +200,41 @@
 
 `待补充`
 
-## nginx
+## 关系数据库服务（MySQL）
 
 `待补充`
+
+## 自动化构建测试发布服务
+
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
+### 部署
+![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
 
 ## 容器化部署
 
 `待补充`
 
-## 自动化构建测试发布流程
-
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
-### 部署
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
-## 监控预警
+## 日志中心
 
 `待补充`
 
-## 全链路追踪
+## 分布式事务集群
 
 `待补充`
 
-## 熔断限流
+## 大数据中心（数据采集分析）
 
-`待补充`
-
-## 性能监控平台
-
-`待补充`
-
-## 数据采集分析
-
-#### 数据分析技术架构
+### 数据分析技术架构
 
 ![data_analyze_framework](../_media/image/03-outline-design/data_analyze_framework.png)
 
-#### 数据分析开发流程
+### 数据分析开发流程
 
 ![data_analyze_development_flow](../_media/image/03-outline-design/data_analyze_development_flow.png)
 
+## 性能监控中心（全链路追踪）
 
+`待补充` 
 
 ## 参考
 

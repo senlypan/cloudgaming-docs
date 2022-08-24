@@ -7,7 +7,7 @@
 > 更新: 2022-07-26
 
 ## 工具
-    
+
 - [腾讯文档 - 文档共享工具](https://docs.qq.com/desktop)
 - [ProcessOn - 制图共享工具](https://www.processon.com/)
 - [Cloudcraft - 架构图设计工具](https://www.cloudcraft.co/)
@@ -37,8 +37,13 @@
 
 !> 视频提取码，请在我们 **微信群** 历史消息中查找，或向组员索要，每期都共享至微信群 
 
-
-- **阶段二**
+- **阶段二：规划设计**
+    - 2022-08-23 周二
+        - [20220823-阶段二-云游戏平台部署架构沟通-周二.mp4](https://meeting.tencent.com/v2/cloud-record/share?id=18e3c24d-7501-4197-a326-d52797f7e690)
+        密码：K2K4
+    - 2022-08-19 周五
+        - [20220819-阶段二-云游戏平台任务分工+技术架构-周五.mp4](https://meeting.tencent.com/user-center/shared-record-info?id=78f2fba5-0736-450b-a32c-a991b56b1d34&click_source_for_middle_login=2)
+    
     - 2022-08-16 周二
         - [20220816-阶段二-云游戏平台任务分工+技术架构-周二.mp4](https://meeting.tencent.com/v2/cloud-record/share?id=bfd82588-7dd5-4fcd-9280-186570b923f9&from=3)
         密码：ZE8F
@@ -47,8 +52,8 @@
     - 2022-08-09 周二
         - [20220809-阶段二-云游戏平台需求确认+技术架构沟通-周二（上）.mp4](https://yunpan.360.cn/surl_y8rIHaxxKBg)
         - [20220809-阶段二-云游戏平台需求确认+技术架构沟通-周二（下）.mp4](https://yunpan.360.cn/surl_y8rILJwCQT3)
-
-- **阶段一**
+    
+- **阶段一：需求沟通**
     - 2022-08-05 周五
         - 20220726-阶段一-云游戏平台数据分析会议纪要-周五（文档见微信群）
     - 2022-08-02 周二
@@ -58,5 +63,4 @@
         - [20220729-阶段一-云游戏平台需求评审会-周五（下）.mp4](https://yunpan.360.cn/surl_y8cpN3H2zWJ)
     - 2022-07-26 周二
         - [20220726-阶段一-云游戏平台需求沟通会-周二（全）.mp4](https://yunpan.360.cn/surl_y8wgwHktxnE)
-
 
