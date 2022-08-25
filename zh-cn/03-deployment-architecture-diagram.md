@@ -173,15 +173,36 @@
 
 ## 任务调度
 
+### 使用场景
+
+>1.合同到期，定时任务处理，处理相关的资源，处理相关的通知<br>
+>2.每日，每月生成日账单和月账单<br>
+>3.定时查询相关企业风险，分析相关情况<br>
+>4.定时分析资源情况<br>
+>5.订单支付超时<br>
+>6.定时同步数据
+
+### 选型
+
+
+![](../_media/image/03-tech-architecture-diagram/job-compare.jpg)
+
+
 ### xxl-job 架构
 
 ![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
-### 部署
+#### 部署
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment-001.jpg)
-### 任务调度
+#### 任务调度
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-dispatch.jpg)
-### 执行器注册
+#### 执行器注册
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-executor.jpg)
+#### 故障转移
+![](../_media/image/03-tech-architecture-diagram/xxl-job-failover.jpg)
+#### 失败重试
+![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail.jpg)
+
+
 ## 分布式事务
 
 `待补充`
