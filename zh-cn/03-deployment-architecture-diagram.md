@@ -48,70 +48,62 @@
 
 `待补充`
 
-## 网关中心
+## 业务网关（网关中心）
 
 ### 常见网关对比
 
 > 目前常见的开源网关大致上按照语言分类有如下几类:
 
-| 语言           | 网关   | 
-| ---------------| ----- |
-| Nginx + lua    | OpenResty、Kong、Orange、Abtesting gateway 等 |
-| Java           | Zuul/Zuul2、Spring Cloud Gateway、Kaazing KWG、gravitee、Dromara soul 等 |
-| Go             | Janus、fagongzi、Grpc-gateway |
-| .net           | Ocelot |
-| NodeJS         | Express Gateway、Micro Gatewa |
+| 语言           | 网关                               | 
+| ---------------| --------------------------------- |
+| Nginx + lua    | [OpenResty](http://openresty.org/)、[Kong](https://konghq.com/)、[Orange](http://orange.sumory.com/) 等 |
+| Java           | [Zuul1/Zuul2](https://github.com/Netflix/zuul)、[Spring Cloud Gateway](https://spring.io/projects/spring-cloud-gateway/)、[Apache ShenYu](https://shenyu.apache.org/)、[Kaazing KWG](https://kaazing.com)、[gravitee](https://www.gravitee.io/) 等    |
+| Go             | Janus、fagongzi、Grpc-gateway 等 |
+| C++            | Envoy 等                         |
+| .net           | Ocelot 等                        |
+| NodeJS         | Express Gateway、Micro Gateway 等|
 
 > 按照使用数量、成熟度等来划分，主流的有 4 个：
 
 - **OpenResty** 
     - Nginx + Lua
-- **Kong** 
+- **Kong/Orange** 
     - Nginx + Lua + OpenResty
 - **Zuul/Zuul2** 
-    - Java
+    - Java（Servlet/Netty Server）
 - **Spring Cloud Gateway**
-    - Java
+    - Java（WebFlux）
 
-### 选型参考
+> 互联网企业常见的方案有基于 Openresty 的 Kong、Orange，基于 Java 的 Zuul 系列、SpringCloudGateWay ，以及基于 Go 的 Tyk
 
-> 互联网企业常见的方案有基于 Openresty 的 Kong、Orange，基于 Go 的 Tyk 和基于 Java 的 Zuul。
+| 维度         | OpenResty         | Kong                               | Orange                    |  Zuul 1         | Zuul 2         | SpringCloudGateway                 | 
+| ---------    | ----------------- | -----------------------------------| ------------------------- | ----------------| ---------------| ---------------------------------- | 
+| **效率**     |  高                | 高                                 | 高                        |  低             | 一般            | 一般，传闻 RPS 是 Zuul2 的 1.6 倍   | 
+| **开发语言** |  Lua               | Lua                                | Lua                       |  Java           | Java           | Java                               | 
+| **技术栈**   |  Nginx + Lua       | Nginx + Lua + OpenResty            | Nginx + Lua + OpenResty   |  Springboot     | Springboot     | Springboot                         | 
+| **存储**     |  Redis、Memcached  | Cassandra、PostgreSQL              | MySQL                     |  MySQL 等       |  MySQL 等       | MySQL 等                          | 
+| **服务注册** |  Consul、ETCD      | Consul、ETCD                       | Consul、ETCD              |  Nacos、Consul   | Nacos、Consul  | Nacos、Consul                      | 
+| **配置中心** |  Consul、ETCD      | Consul、ETCD                       | Consul、ETCD              |  Nacos、Consul   | Nacos、Consul  | Nacos、Consul                      | 
+| **管理界面** |  开源              |  第三方开源                         | 开源                      |  内置            | 内置           |  无                                | 
+| **社区**     |  成熟              | 相对成熟，用户问题汇总，社区，插件开源| 少，个人开发者             |  成熟            | 开源不久，资料少 | 社区成熟，资源较少                  | 
+| **代码**     |  开源              | 开源，更新频繁                      | 开源                      |  开源            | 开源            |  开源                              | 
+| **学习成本** |  简易，需进行lua开发| 简易，简易，需进行lua开发            | 较高                      |  一般            | 参考资料较少     | 简单易用                           | 
+| **维护成本** |  普通，需维护lua脚本| 较高，需要维护lua脚本                | 较高                      |  一般            | 一般            | spring系列可扩展强，易配置 可维护性好| 
+| **扩展**     |  自建              | 支持集群                           | 支持集群                   |  支持            | 支持            |  支持                              |  
+| **多节点**   |  自建              | 支持                               | 需要开发                   |  支持            | 支持            |  支持                              | 
+| **功能**     |  自建              | 丰富，部分开源 + 商业（收费）        | 丰富                      |  丰富            | 丰富            |  异步，配置灵活                      | 
+| **限流**     |  需要lua开发       | 支持                               |                           |  支持            | 支持            |  支持                               |
+| **鉴权**     |  需要lua开发       | 支持普通鉴权，Key Auth鉴权，HMAC，auth2.0 |                      |  filter中实现    | filter中实现    |  支持普通鉴权、auth2.0               | 
+| **监控**     |  需要lua开发       | 内置                               |                           |  filter中实现    | filter中实现    |  Gateway Metrics Filter             |
+| **WEb容器**   |                   |                                   |                           |  Servlet        |  Netty Server   |  WebFlux                           | 
+| **线程模型**  |                   |                                   |                           |  阻塞            |  非阻塞         |  非阻塞                             | 
+| **适用场景**  |  大型流量网关      | 大型流量网关                        | 大型流量网关                |  中小型业务网关  | 大型业务网关    | 大型业务网关                        | 
 
-| 技术项          | 概述  |
-| --------------- | ----- |
-| Zuul            | 是一种提供动态路由、监视、弹性、安全性等功能的边缘服务，Zuul 是 Netflix 出品的一个基于 JVM 路由和服务端的负载均衡器。 |
-| Gateway         | 是一种提供动态路由、监视、弹性、安全性等功能的边缘服务，Zuul 是 Netflix 出品的一个基于 JVM 路由和服务端的负载均衡器。 |
-| Kong            | Kong 是 Mashape 提供的一款 API 管理软件，它本身是基于 Nginx + Lua 的，但是比 Nginx 提供了更简单的配置方式，数据采用了 Apache Cassandra/PostgreSQL 存储并提供了一些优秀的插件，比如验证、日志、调用频率限制等。高级服务收费！|
-| Orange          | 和 Kong 类似也是基于 OpenResty 的一个 API 网关程序。|
-| Tyk             | 是一个基于 Go 实现的开源 API 网关服务， Tyk 提供一个 API 管理平台，其中包括 API 网关、API 分析、开发人员门户和 API 管理面板。|
-| apiaxle         | Nodejs 实现的一个 API 网关。|
-| apiumbrella    | Ruby 实现的一个 API 网关。|
+### 选型初步结论
 
-> 几种网关的对比
+👉 对于现有规模小的项目、接入成本有限制的项目、以 Java 开发语言为主导 **且** 对上线有迫切要求的团队，推荐优先使用 **Zuul1** 和 **Spring Cloud Gateway** 甚至 **Apache ShenYu**，尝鲜可以使用 **Zuul2**。 
 
-| 维度     |  Zuul 1       | OpenResty         | Kong                    | Orange                    | Zuul 2        | SpringCloudGateway | 
-| -----    | ---------     | -----------------  | ------------------------ | -------------------------| -------------| --------------------| 
-| WEb容器  |  Servlet       |                   |                         |                           | Netty Server  |  WebFlux           | 
-| 线程模型  | 阻塞          |                   |                         |                           | 非阻塞         |  非阻塞             | 
-| 支持Http  | ✔️           |                   |                         |                           | ✔️            |  ✔️                | 
-| 支持dubbo | ❌           |                   |                         |                           | ❌            |  ❌                | 
-| 效率     |  一般          |  高                | 高                      | 高                        | 一般          |  一般，传闻 RPS 是 Zuul2 的 1.6 倍            | 
-| 开发语言 |  Java          |  Lua               | Lua                     | Lua                       | Java         | Java                | 
-| 技术栈   |  Springboot    |  Nginx + Lua       | Nginx + Lua + OpenResty | Nginx + Lua + OpenResty   | Springboot    | Springboot         | 
-| 存储     |                |  Redis、Memcached  | Cassandra、PostgreSQL   | MySQL                     |               |                     | 
-| 服务注册 |  Eureka、Consul |  Consul、ETCD     | Consul、ETCD             | Consul/ETCD               |               |                     | 
-| 管理界面 |  内置           |  开源             | 第三方开源                | 开源                      |               |                     | 
-| 社区     |  成熟           |  成熟             | 相对成熟，用户问题汇总，社区，插件开源| 少，个人开发者             |开源不久，资料少 | spring社区成熟，但gateway资源较少| 
-| 代码     |  开源           |  开源             | 开源，更新频繁            | 开源                       |               |                     | 
-| 学习成本 |  一般           |  简单易用，但是需要进行的lua开发很多 | 简单易用，api转发通过管理员接口配置，开发需要lua脚本 | 较高   | 参考资料较少   |   简单易用 | 
-| 维护成本 |  一般           |  普通，需要维护lua脚本  | 较高，需要维护lua脚本  | 较高                       | 可维护性较差 |spring系列可扩展强，易配置 可维护性好| 
-| 扩展     |  支持           |  自建              | 支持集群                  | 支持集群                  |               |                     | 
-| 多节点   |  支持           |  自建              | 支持                      | 需要开发                  |               |                     | 
-| 功能     |  丰富           |  自建              | 丰富，部分开源 + 商业（收费）      | 丰富                     |               |                      | 
-| 服务编排  | ❌            |                    |                           |                           | ❌            |  ❌                | 
-| 限流     |                |  需要lua开发        | 根据秒，分，时，天，月，年，根据用户进行限流。可在原码的基础上进行开发 | |可以通过配置文件配置集群限流和单服务器限流亦可通过filter实现限流扩展|可以通过IP，用户，集群限流，提供了相应的接口进行扩展|
-| 鉴权     |                |  需要lua开发        | 支持普通鉴权，Key Auth鉴权，HMAC，auth2.0 | | filter中实现| 支持普通鉴权、auth2.0 | 
-| 监控     |                |  需要开发           | 可上报datadog，记录请求数量，请求数据量，应答数据量，接收于发送的时间间隔，状态码数量，kong内运行时间 | | filter中实现 | Gateway Metrics Filter |
+🤌 对于未来有预期的项目、接入成本有空间的项目、有 Nginx 实践经验 **或** 学习能力强 **且** 允许成长的团队，推荐使用 **Kong** 或 **Orange** ，对效率有更高要求可以自建 **OpenResty**。
 
 ### 业务网关体系结构
 
@@ -132,6 +124,8 @@
 - [InfoQ - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
 
 - [博客园 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
+
+- [美团技术团队 - 百亿规模API网关服务Shepherd的设计与实现](https://mp.weixin.qq.com/s/iITqdIiHi3XGKq6u6FRVdg)
 
 ## 消息服务
 
