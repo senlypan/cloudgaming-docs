@@ -280,6 +280,9 @@
 | 负载均衡  | 支持                             | 支持                             | 支持                   |                | 
 | 部署方式  | 独立、嵌入                          | 独立                             | 独立                   |                | 
 
+> 常用MQ优缺点及应用场景
+
+![](../_media/image/03-deployment-architecture-diagram/mq的优缺点和应用场景.png)
 
 #### mq基本架构
 ![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
