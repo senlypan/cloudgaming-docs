@@ -282,6 +282,8 @@
 
 > 常用MQ优缺点及应用场景
 
+链接：http://assets.processon.com/chart_image/630a0f2d63768906ff68ca0e.png
+
 ![](../_media/image/03-deployment-architecture-diagram/mq的优缺点和应用场景.png)
 
 #### mq基本架构
