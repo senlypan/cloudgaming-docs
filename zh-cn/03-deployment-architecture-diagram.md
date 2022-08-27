@@ -201,8 +201,8 @@
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-failover.jpg)
 #### 失败重试
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail.jpg)
-
-
+#### 超时 失败重试
+![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail2.jpg)
 ## 分布式事务
 
 `待补充`
