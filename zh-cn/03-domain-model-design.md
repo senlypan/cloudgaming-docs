@@ -48,6 +48,10 @@
 
 ## 参考
 
+- [YouTube - 领域建模：DDD 原理及秒杀系统领域模型](https://www.youtube.com/watch?v=vD1Gy3G6D8U)
+
+- [拉勾教育 - DDD 微服务落地实战](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=549#/detail/pc?id=5326)
+
 - [微信开放社区 - DDD在有赞信贷核心系统中的实践](https://developers.weixin.qq.com/community/develop/article/doc/0000a239230d901cbb4d15c0c51c13)
 
 - [掘金社区 - 一文带你落地DDD](https://juejin.cn/post/7004002483601145863)
