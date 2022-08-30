@@ -32,6 +32,8 @@
 
 ### 👉 领域模型示例
 
+![](../_media/image/03-domain-model-design/domain-model-design-000.png)
+
 #### 图示 01 - 事件风暴
 
 场景需求分析，产生命令、业务流、领域事件
@@ -147,6 +149,8 @@
 - [SegmentFault - 架构的“一小步”，业务的一大步](https://segmentfault.com/a/1190000018188985)
 
 - [简书 - DDD 实战篇：权限域战略建模](https://www.jianshu.com/p/83045970f8ad)
+
+- [极客时间 - DDD 实战课：基于 DDD 的微服务拆分与设计](https://time.geekbang.org/column/article/149941)
 
 - [拉勾教育 - DDD 微服务落地实战](https://kaiwu.lagou.com/course/courseInfo.htm?courseId=549#/detail/pc?id=5326)
 
