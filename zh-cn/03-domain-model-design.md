@@ -125,7 +125,11 @@
 
 ## 运营中心
 
-`待补充`
+### 计费
+
+资源与计费
+
+![](../_media/image/03-domain-model-design/domain-charge-resource-001.jpg)
 
 ## 内容中心
 
