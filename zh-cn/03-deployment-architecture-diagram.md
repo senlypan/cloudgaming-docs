@@ -250,15 +250,16 @@
 
 （美团技术团队 - 百亿规模API网关服务Shepherd的设计与实现 [via](https://mp.weixin.qq.com/s/iITqdIiHi3XGKq6u6FRVdg)）
 
-### 网关选型参考
+### 网关选型参考 
 
 - [InfoQ - 天翼账号网关系统架构演进历程](https://xie.infoq.cn/article/c6703d216c43c2b522b9b4ffa)
 
-- [InfoQ - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
+- [Qunar技术沙龙 - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
 
-- [Qunar技术沙龙 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
+- [博客园 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
 
 - [美团技术团队 - 百亿规模API网关服务Shepherd的设计与实现](https://mp.weixin.qq.com/s/iITqdIiHi3XGKq6u6FRVdg)
+
 
 ## 消息服务
 
@@ -341,11 +342,16 @@
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail.jpg)
 #### 超时 失败重试
 ![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail2.jpg)
+
 ## 分布式事务
 
 `待补充`
 
-## 配置中心与注册中心
+## 注册中心
+
+`待补充`
+
+## 配置中心
 
 `待补充`
 
@@ -388,7 +394,10 @@
 
 > 几种常用DBMS对比
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02d98a4068fdc75a2d165e2f2f70fbd2d7b02f34
 | 维度 | mysql | pgsql | oracle |
 | ---- | -------- | ----- | ------- |
 |   **是否开源**   |    是      |   是    |   否|
@@ -402,6 +411,7 @@
 | **主从复制** | biglog逻辑复制 | 物理复制 | 物理复制|
 
 > 优势分析
+
 * mysql优势：多存储引擎，相对灵活，开源简单，学习成本低，多线程模式单机性能高，天然支持高链接
 * pgsql优势：开源，功能强大，支持大量复杂函数，支持多索引，支持函数内索引，对oracle兼容较好
 * oracle优势：好的东西除了贵哪都好
@@ -417,7 +427,10 @@
 
 > 常用分库分表中间件对比
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02d98a4068fdc75a2d165e2f2f70fbd2d7b02f34
 | 维度 | mycat | shardingjdbc | tddl |
 | ---- | -------- | ----- | ------- |
 |   **是否开源**   |    是      |   是    |   否|
@@ -465,21 +478,14 @@
 
 ![mycat-deployment](../_media/image/03-deployment-architecture-diagram/mycat-deployment.png)
 
-## 自动化构建测试发布服务
+
+## 自动化构建测试发布服务（含容器化部署）
 
 ![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
 ### 部署
 ![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
 
-## 容器化部署
-
-`待补充`
-
 ## 日志中心
-
-`待补充`
-
-## 分布式事务集群
 
 `待补充`
 
