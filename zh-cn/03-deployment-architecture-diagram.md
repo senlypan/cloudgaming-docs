@@ -353,6 +353,8 @@
 
 > 几种常用缓存对比
 
+
+
 | 维度 | memcache | redis | ehcache | guava | hashmap |
 | ---- | -------- | ----- | ------- | ----- | ------- |
 |   **是否是分布式缓存**   |    是      |   是    |   是，但一致性不高   |   否    |       否  |
@@ -380,11 +382,13 @@
 
 > Redis 部署架构示意图
 
-
+![redis部署架构示意图](../_media/image/03-deployment-architecture-diagram/redis部署架构示意图.png)
 
 ## 关系数据库服务
 
 > 几种常用DBMS对比
+
+
 | 维度 | mysql | pgsql | oracle |
 | ---- | -------- | ----- | ------- |
 |   **是否开源**   |    是      |   是    |   否|
@@ -412,6 +416,8 @@
 
 
 > 常用分库分表中间件对比
+
+
 | 维度 | mycat | shardingjdbc | tddl |
 | ---- | -------- | ----- | ------- |
 |   **是否开源**   |    是      |   是    |   否|
@@ -454,6 +460,10 @@
 * 跨库join
 * 分布式事务
 * 结果聚合
+
+> Mycat 部署架构示意图
+
+![mycat部署架构示意图](../_media/image/03-deployment-architecture-diagram/mycat部署架构示意图.png)
 
 ## 自动化构建测试发布服务
 
