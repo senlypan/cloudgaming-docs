@@ -474,6 +474,10 @@
 * 分布式事务
 * 结果聚合
 
+> Sharding-jdbc 架构示意图
+
+![shardingjdbc-deployment](../_media/image/03-deployment-architecture-diagram/shardingjdbc-deployment.png)
+
 > Mycat 部署架构示意图
 
 ![mycat-deployment](../_media/image/03-deployment-architecture-diagram/mycat-deployment.png)
