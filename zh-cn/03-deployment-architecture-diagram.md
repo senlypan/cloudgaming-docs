@@ -382,7 +382,7 @@
 
 > Redis 部署架构示意图
 
-![redis部署架构示意图](../_media/image/03-deployment-architecture-diagram/redis部署架构示意图.png)
+![redis-deployment](../_media/image/03-deployment-architecture-diagram/redis-deployment.png)
 
 ## 关系数据库服务
 
@@ -463,7 +463,7 @@
 
 > Mycat 部署架构示意图
 
-![mycat部署架构示意图](../_media/image/03-deployment-architecture-diagram/mycat部署架构示意图.png)
+![mycat-deployment](../_media/image/03-deployment-architecture-diagram/mycat-deployment.png)
 
 ## 自动化构建测试发布服务
 
