@@ -328,19 +328,19 @@
 
 ### xxl-job 架构
 
-![](../_media/image/03-tech-architecture-diagram/xxl-job.png)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job.png)
 #### 部署
-![](../_media/image/03-tech-architecture-diagram/xxl-job-deployment-001.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-deployment-001.jpg)
 #### 任务调度
-![](../_media/image/03-tech-architecture-diagram/xxl-job-dispatch.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-dispatch.jpg)
 #### 执行器注册
-![](../_media/image/03-tech-architecture-diagram/xxl-job-executor.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-executor.jpg)
 #### 故障转移
-![](../_media/image/03-tech-architecture-diagram/xxl-job-failover.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-failover.jpg)
 #### 失败重试
-![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-executor-fail.jpg)
 #### 超时 失败重试
-![](../_media/image/03-tech-architecture-diagram/xxl-job-executor-fail2.jpg)
+![](../_media/image/03-deployment-architecture-diagram/xxl-job/xxl-job-executor-fail2.jpg)
 ## 分布式事务
 
 `待补充`
@@ -359,9 +359,22 @@
 
 ## 自动化构建测试发布服务
 
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish.png)
-### 部署
-![](../_media/image/03-tech-architecture-diagram/auto-build-test-publish-002.jpg)
+### 产品图
+
+![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-products.jpg)
+
+### 选型比较
+
+![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-coompare.png)
+
+### 部署流程
+![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-publish.png)
+### 环境流水线
+![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-env-pipe.jpg)
+
+
+### 部署图
+![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-publish-002.jpg)
 
 ## 容器化部署
 
