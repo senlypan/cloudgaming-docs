@@ -250,15 +250,16 @@
 
 （美团技术团队 - 百亿规模API网关服务Shepherd的设计与实现 [via](https://mp.weixin.qq.com/s/iITqdIiHi3XGKq6u6FRVdg)）
 
-### 网关选型参考
+### 网关选型参考 
 
 - [InfoQ - 天翼账号网关系统架构演进历程](https://xie.infoq.cn/article/c6703d216c43c2b522b9b4ffa)
 
-- [InfoQ - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
+- [Qunar技术沙龙 - 业务网关的落地实践](https://www.infoq.cn/article/cAcwMUNMJMQpIxGJYkcS)
 
-- [Qunar技术沙龙 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
+- [博客园 - 亿级流量架构之网关设计思路、常见网关对比](https://www.cnblogs.com/Courage129/p/14446586.html)
 
 - [美团技术团队 - 百亿规模API网关服务Shepherd的设计与实现](https://mp.weixin.qq.com/s/iITqdIiHi3XGKq6u6FRVdg)
+
 
 ## 消息服务
 
@@ -345,19 +346,135 @@
 
 `待补充`
 
-## 配置中心与注册中心
+## 注册中心
+
+`待补充`
+
+## 配置中心
 
 `待补充`
 
 ## 缓存服务
 
-`待补充`
+> 几种常用缓存对比
 
-## 关系数据库服务（MySQL）
 
-`待补充`
 
-## 自动化构建测试发布服务
+| 维度 | memcache | redis | ehcache | guava | hashmap |
+| ---- | -------- | ----- | ------- | ----- | ------- |
+|   **是否是分布式缓存**   |    是      |   是    |   是，但一致性不高   |   否    |       否  |
+| **是否支持持久化** | 否 | 是 | 是 | 否 | 否 |
+| **高可用** | 是，依赖插件 | 是 | 是 | 否 | 否 |
+| **过期策略** | 是 | 是 | 是 | 是 | 否 |
+| **可存储数据大小** | 服务器内存 | 服务器内存 | 服务器内存+磁盘 | jvm内存| jvm内存|
+| **特性** | 分布式模式下最快缓存，可存储图片视频 | 支持多种类型数据，用法灵活，可以作为内存数据库使用 | 轻量，快，无限存储 | 简单轻量,更新锁定，集成db回填| java内置|
+
+
+
+> 缓存优点
+* memcache: 多线程，速度快，无内存碎片内存使用率高
+* Redis: 支持数据结构多，灵活可靠，功能多，可做nosql数据库，mq甚至数据分析，成熟高可用方案
+* ehcache: 支持分布式的本地缓存 简单轻便
+* guava: 本地缓存简单高效
+* hashmap: 本地缓存 java内置
+
+> 选型推荐
+
+* 分布式缓存首选redis, 追求极致性能且读多写少且可靠性要求不高可考虑尝试memcache
+* 本地缓存首选guava, 如需要分布式缓存且不想用redis可尝试ehcache，追求降低学习成本及依赖且存储几乎不变数据可选择hashmap
+
+
+
+> Redis 部署架构示意图
+
+![redis-deployment](../_media/image/03-deployment-architecture-diagram/redis-deployment.png)
+
+## 关系数据库服务
+
+> 几种常用DBMS对比
+
+| 维度 | mysql | pgsql | oracle |
+| ---- | -------- | ----- | ------- |
+|   **是否开源**   |    是      |   是    |   否|
+| **支持系统** | all | all | all | 
+| **事务支持** | 支持 | 支持 | 支持 |
+| **技术支持** | 社区 | 社区 | 客服 |
+| **存储结构** | 索引组织表 | 堆表 | 都支持 |
+| **sql支持** | 宽松sql | 严格sql | 严格sql|
+| **复杂sql支持** | 低 | 高 | 高|
+| **并发模式** | 单进程多线程 | 多进程 | 多进程|
+| **主从复制** | biglog逻辑复制 | 物理复制 | 物理复制|
+
+> 优势分析
+
+* mysql优势：多存储引擎，相对灵活，开源简单，学习成本低，多线程模式单机性能高，天然支持高链接
+* pgsql优势：开源，功能强大，支持大量复杂函数，支持多索引，支持函数内索引，对oracle兼容较好
+* oracle优势：好的东西除了贵哪都好
+
+> 选型推荐
+
+* 中小型项目可选mysql,计算量较大或数据仓库项目可选 pg或oracle
+* 项目数据庞大，计算量庞大，可靠性和稳定性要求高技术强大，预算足够且不惧制裁首选oracle
+
+
+
+
+
+> 常用分库分表中间件对比
+
+| 维度 | mycat | shardingjdbc | tddl |
+| ---- | -------- | ----- | ------- |
+|   **是否开源**   |    是      |   是    |   否|
+| **是否中心化** | 是 | 否 | 否 | 
+| **orm支持** | 任意 | 任意 | 任意 |
+| **数据库支持** | jdbc | jdbc | jdbc |
+| **语言支持** | 任意 | java | java |
+| **外部依赖** | 无 | 无 | diamond（阿里内部组件）|
+| **复杂sql支持** | 低 | 高 | 高|
+| **代码侵入性** | 低 | 无 | ——|
+| **跨库join** | 支持 | 支持 | ——|
+| **分布式事务** | 支持 | 支持 | ——|
+| **社区活跃度** | 高 | 高 | ——|
+| **成熟度** | 高 | 中 | ——|
+| **可扩展性** | 高 | 低 | ——|
+| **弹性伸缩** | 支持 | 不支持 | ——|
+
+
+
+> 优势分析
+
+* mycat: 开源，功能强大，对应用透明，数据治理方便
+* Sharding-jdbc: 开源轻量，代码无侵入，运维简单
+* Tddl:  阿里出品 稳定强大
+
+
+
+> 选型建议
+
+* 异构项目、大型项目、数据增长快速有高可用、弹性伸缩需求可选mycat
+* 中小型java项目，数据增长缓慢可选sharding-jdbc
+* 阿里内部项目 可选tddl
+
+> 分库分表中间件功能基本要求
+
+* 分片
+* 路由
+* 唯一主键
+* 主从配置
+* 跨库join
+* 分布式事务
+* 结果聚合
+
+> Sharding-jdbc 架构示意图
+
+![shardingjdbc-deployment](../_media/image/03-deployment-architecture-diagram/shardingjdbc-deployment.png)
+
+> Mycat 部署架构示意图
+
+![mycat-deployment](../_media/image/03-deployment-architecture-diagram/mycat-deployment.png)
+
+
+## 自动化构建测试发布服务（含容器化部署）
 
 ### 产品图
 
@@ -376,15 +493,7 @@
 ### 部署图
 ![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-publish-002.jpg)
 
-## 容器化部署
-
-`待补充`
-
 ## 日志中心
-
-`待补充`
-
-## 分布式事务集群
 
 `待补充`
 
