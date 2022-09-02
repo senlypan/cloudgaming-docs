@@ -493,6 +493,8 @@
 ### 部署图
 ![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-publish-002.jpg)
 
+### 其他
+- [最适合开发者的21种Jenkins替代工具](https://zhuanlan.zhihu.com/p/359770683)
 ## 日志中心
 
 `待补充`
