@@ -283,28 +283,37 @@
 
 > 常用MQ优缺点及应用场景
 
-链接：http://assets.processon.com/chart_image/630a0f2d63768906ff68ca0e.png
+[图片链接]：http://assets.processon.com/chart_image/630a0f2d63768906ff68ca0e.png
 
-![](../_media/image/03-deployment-architecture-diagram/mq的优缺点和应用场景.png)
+![](../_media/image/03-deployment-architecture-diagram/mq/mq的优缺点和应用场景.png)
 
 #### mq基本架构
-![](../_media/image/03-deployment-architecture-diagram/mq-base-architecture.jpg)
+![](../_media/image/03-deployment-architecture-diagram/mq/mq-base-architecture.jpg)
 
 #### kafka集群架构
-![](../_media/image/03-deployment-architecture-diagram/kafka-architecture.png)
+![](../_media/image/03-deployment-architecture-diagram/mq/kafka-architecture.png)
 
 #### rocketmq集群架构
-![](../_media/image/03-deployment-architecture-diagram/rocketmq-architecture.png)
+![](../_media/image/03-deployment-architecture-diagram/mq/rocketmq-architecture.png)
 
 #### activemq集群架构
 ##### 1.p2p
-![](../_media/image/03-deployment-architecture-diagram/activemq-p2p.png)
+![](../_media/image/03-deployment-architecture-diagram/mq/activemq-p2p.png)
 
 ##### 2.p/s
-![](../_media/image/03-deployment-architecture-diagram/activemq-ps.png)
+![](../_media/image/03-deployment-architecture-diagram/mq/activemq-ps.png)
 
 #### rabbitmq集群架构
-![](../_media/image/03-deployment-architecture-diagram/rabbitmq-architect.jpeg)
+![](../_media/image/03-deployment-architecture-diagram/mq/rabbitmq-architect.jpeg)
+
+> MQ选型
+
+- 1. Kafka
+   Kafka 主要特点是基于 Pull 的模式来处理消息消费，追求高吞吐量，一开始的目的就是用于日志收集和传输，适合产生 大量数据 的互联网服务的数据收集业务。 大型公司 建议可以选用，如果有 日志采集功能，肯定是首选 kafka 了。
+- 2. RocketMQ
+   天生为金融互联网领域而生，对于可靠性要求很高的场景，尤其是电商里面的订单扣款，以及业务削峰，在大量交易涌入时，后端可能无法及时处理的情况。 RoketMQ 在稳定性上可能更值得信赖，这些业务场景在阿里双 11 已经经历了多次考验，如果你的业务有上述并发场景，建议可以选择 RocketMQ 。
+- 3. RabbitMQ
+   结合 erlang 语言本身的并发优势，性能好 时效性微秒级 ， 社区活跃度也比较高，管理界面用起来十分方便，如果你的 数据量没有那么大 ，中小型公司优先选择功能比较完备的 RabbitMQ 。
 
 ## 文件服务
 
@@ -497,7 +506,60 @@ Buddy、Jenkins、GitLab CI/CD和CircleCI
 - [最适合开发者的21种Jenkins替代工具](https://zhuanlan.zhihu.com/p/359770683)
 ## 日志中心
 
-`待补充`
+#### 分布式日志系统基本要素
+
+**模型：**
+
+![](../_media/image/03-deployment-architecture-diagram/log/log-base.jpg)
+
+* 采集
+  * 采集过程中数据应对数据多样性、数据量大、变化快等特点，需要保证数据采集过程中的可靠性、实时性、性能，同时要避免数据重复，和资源的占用大。
+  * 日志一般通过两种方式进行收集，一是通过日志文件，二是通过消息中间件。比较主流的数据采集工具有Fluentd、Logstash、Flume、scribe，还有其他的一些比如Promtail、LogAgent、LogTail
+* 传输
+  * 数据传输需要数据管道，数据传输过程要保证一个高可用，常用最多的一般就是kafka。上面提到的Flume和Logstash框架也有Channel的概念，也可以进行数据传输，要结合具体业务场景进行搭配使用
+* 存储
+  * 日志收集后需要落地存储并提供检索与分析功能。对于海量的日志数据单节点服务器已经难以存储，同时后续扩容和容灾也会给运维带来很大压力。
+所以支持分布式多节点分片存储，主从同步，快速查询索引结构也是设计阶段考虑的因素。常见的存储和检索框架如Hbase、Solr、Elasticsearch等。
+* 可视化
+  * 可以通过终端进行查看无需通过后台程序，参数可配置，终端上可以使用命令行，界面直观简洁多维度展示等功能。
+常用最多的就是Kibana，针对Elasticsearch的一款开源的可视化组件，通过Kibana可以完成对Elasticsearch的可视化检索与分析、还可以自定义统计图表以及做一些实时指标监控。
+
+> 常用日志系统解决方案
+
+|  维度  |                    ELK                    |              Loki              |                         Flume                          |                        Graylog                         |
+|:----:|:-----------------------------------------:|:------------------------------:|:------------------------------------------------------:|:------------------------------------------------------:|
+| 框架搭配 | Elasticsearch + Logstash + Kibana + kafka |   Loki + Promtail + Grafana    |       Flume + Kafka + Sparkstream + Hbase + Solr       | Elasticsearch + MongoDB + Graylog Server + Graylog Web |
+|  优点  |     目前流行的日志系统解决方案；<br/>框架开源，社区活跃，百亿级数据秒级查询     | 安装部署等操作简单，成本低，可扩展，Grafana原生支持  |    所有组件在华为的Fusioninsight平台都有提供；<br/>组件使用熟悉程度高；对已有交易没有侵入性    | 一体化方案，安装方便；搜索语法简单；搜索结果高亮显示；<br/>内置警报可用；用java开发，支持GLEF  |
+|  缺点  |     组件多，部署和维护相对复杂，<br/>并且占用服务器资源多，不能处理多行日志     | 技术比较新颖，论坛不是非常活跃；<br/>功能单一，只针对日志的查看；<br/>对于数据的处理以及清洗没有ELK强大 | Hbase由于其Rowkey设计的特点，查询比较受限；<br/>Hdfs只能是作为数据备份；<br/>Solr需要开发一些功能；<br/>Sparkstream的日志加工处理逻辑必须自主实现 |     控制台操作页面是英文的，针对国内开发使用者使用起来不方便；<br/>使用网络传输，可能会占用项目网络      |
+
+> 常用日志框架架构图
+- ELK
+
+![](../_media/image/03-deployment-architecture-diagram/log/log-elk.jpg)
+
+- Loki
+
+![](../_media/image/03-deployment-architecture-diagram/log/log-loki.png)
+
+- Flume
+
+![](../_media/image/03-deployment-architecture-diagram/log/log-flume.jpg)
+
+- Graylog
+
+![](../_media/image/03-deployment-architecture-diagram/log/log-graylog.png)
+
+> 日志框架技术选型
+
+- ELK：主流的分布式日志系统框架，提供完整的解决方案，组件开源，优先推荐
+
+- Loki：技术新颖，个人不熟悉，不推荐
+
+- Flume：开发量较大，针对开发过程中出现的问题可能会花更多的时间来解决，时间紧迫的话，不推荐
+
+- Graylog：Graylog定位为强大的日志解决方案，提供报警功能，部署较ELK更为方便，不介意控制台为界面英文，优先推荐
+
+**综合：** 单纯收集日志更推荐 Graylog，如果考虑其他数据存储（比如SPU、SKU等商品信息）或开发人员的熟悉程度，开发进度等因素推荐 ELK
 
 ## 大数据中心（数据采集分析）
 
