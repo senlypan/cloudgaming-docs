@@ -481,7 +481,7 @@
 ![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-products.jpg)
 
 ### 选型比较
-
+Buddy、Jenkins、GitLab CI/CD和CircleCI
 ![](../_media/image/03-deployment-architecture-diagram/auto-build-test/auto-build-test-coompare.png)
 
 ### 部署流程
