@@ -511,7 +511,95 @@ Buddy、Jenkins、GitLab CI/CD和CircleCI
 
 ## 性能监控中心（全链路追踪）
 
-`待补充` 
+
+
+> apm介绍
+
+随着微服务架构的流行，一次请求往往需要涉及到多个服务，因此服务性能监控和排查就变得更复杂：
+
+```text
+如何串联整个调用链路，快速定位问题？
+如何澄清各个微服务之间的依赖关系？
+如何进行各个微服务接口的性能分析？
+如何追踪各个业务流程的调用处理顺序？
+```
+a因此，就需要一些可以帮助理解系统行为、用于分析性能问题的工具，以便发生故障的时候，能够快速定位和解决问题，这就是APM系统，全称：Application Performance Management tools，AMP最早是谷歌公开的论文提到的 [Google Dapper](https://links.jianshu.com/go?to=http%3A%2F%2Fbigbully.github.io%2FDapper-translation)。其后越来越多的apm或类apm工具出现在人们眼前，在此，我将一些主流的工具进行对比。
+
+
+
+
+> 常用链路追踪中间件对比
+
+
+| 维度 | cat | zipkin | pinpoint |skywalking|
+| ---- | -------- | ----- | ------- | -----|
+| **实现方式** | 代码埋点（拦截器，注解，过滤器等） | 拦截请求，发送（HTTP，mq）数据至zipkin服务 | java探针，字节码增强 | java探针，字节码增强|
+| **存储选择** | mysql , hdfs | in-memory ， mysql ， Cassandra ， Elasticsearch | HBase | elasticsearch , H2，mysql|
+| **通信方式** | netty+mq | http ， MQ | thrift | GRPC + kafka|
+| **trace查询** | 不支持 | 支持 | 不支持 | 支持 |
+| **外部依赖** | 无 | 无 | diamond（阿里内部组件）||
+| **报警** | 支持 | 不支持 | 支持| 不支持|
+| **JVM监控** | 不支持 | 不支持 | 支持| 不支持|
+| **Metric** | 支持 | 不支持 | 支持| 支持|
+| **全局调用统计** | 支持 | 不支持 | 支持|支持|
+| **OpenTracing** | 不支持 | 支持 |不支持| 支持|
+| **颗粒度** | 代码 不支持跨线程 | 接口级  支持跨线程 | 方法级  不支持跨线程| 方法级 支持跨线程，但是有侵入性|
+| **探针对服务器吞吐量影响** | —— | —— | 高| 低|
+| **性能** | 高 吞吐量16w/s | 默认采用http 性能较低 |数据采集太详细 影响性能|高|
+| **可伸缩** | K8s | K8s |K8s|Satellite|
+| **可扩展性** | 高 | 自带多种存储支持，可支持自定义扩展其他数据库支持 |支持 spi|支持 spi|
+| **可靠性** | 不保证可靠，允许消息丢失 | —— |——|不保证可靠，允许消息丢失|
+| **亮点** | 全异步化，报表非常丰富 | 社区强大，支持内存，低依赖，spring 官方支持 |跟踪粒度细|采集和上报之间 使用无锁环形队列解耦|
+| **优点** | 功能完善,实时性高，高容错 | spring-cloud-sleuth可以很好的集成zipkin ， 代码无侵入，集成非常简单 ， 社区更加活跃。 |完全无侵入， 仅需修改启动方式，界面完善，功能细致。|完全无侵入，界面完善，支持应用拓扑图及单个调用链查询，扩展性非常高|
+
+
+
+> cat架构图
+
+![cat-deployment-all](../_media/image/03-deployment-architecture-diagram/cat-deployment-all.png)
+
+> cat客户端架构图
+
+![cat-client](../_media/image/03-deployment-architecture-diagram/cat-client.png)
+
+> cat服务端架构图
+
+![cat-server](../_media/image/03-deployment-architecture-diagram/cat-server.png)
+
+> zipkin架构图
+
+![zipkin](../_media/image/03-deployment-architecture-diagram/zipkin.png)
+
+> zipkin 集群部署架构图
+
+![zipkin-cluster-deployment](../_media/image/03-deployment-architecture-diagram/zipkin-cluster-deployment.png)
+
+
+> pinpoint架构图
+
+![pinpoint-deployment](../_media/image/03-deployment-architecture-diagram/pinpoint-deployment.png)
+
+> Skywalking 架构图
+
+![skyworking-deployment](../_media/image/03-deployment-architecture-diagram/skyworking-deployment.png)
+
+> Skywalking 拓扑图
+
+![skywalking-topology](../_media/image/03-deployment-architecture-diagram/skywalking-topology.png)
+
+> Skywalking 自动伸缩示意图
+
+![skywalking-highavailable](../_media/image/03-deployment-architecture-diagram/skywalking-highavailable.png)
+
+> 选型建议和结果
+
+总体上看起来cat虽然功能强大但是代码侵入太强，和业务耦合性太高，不符合互联网发展趋势。整体较封闭未来难以迁移试错成本较高。
+
+zipkin 整体上比较轻便但是功能也相对简单，不支持报警和Metric 还需要独立部署其他报警和Metric组件，增加运维成本。
+
+pinpoint 总的来看还是比较完美，无侵入，功能丰富扩展性也高但是文档不全，没有中文社区，学习成本较高并且需要依赖hbase 带来的运维成本过高。
+
+Skywalking 功能完备，文档齐全，社区活跃，代码无侵入，扩展性极强。虽然ui内容丰富程度相较其他组件略有确实，对于当前项目来说满足基本的排错和性能监控需求。
 
 ## 参考
 
