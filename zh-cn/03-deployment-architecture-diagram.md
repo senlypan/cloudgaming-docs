@@ -377,34 +377,34 @@ g. 高可用性，避免单机故障
 
 1. 基础概念
 
-  1. Object：存储到 Minio 的基本对象，如文件、字节流，Anything…
+- Object：存储到 Minio 的基本对象，如文件、字节流，Anything…
 
-  2. Bucket：用来存储 Object 的逻辑空间。每个 Bucket 之间的数据是相互隔离的。对于客户端而言，就相当于一个存放文件的顶层文件夹。
+- Bucket：用来存储 Object 的逻辑空间。每个 Bucket 之间的数据是相互隔离的。对于客户端而言，就相当于一个存放文件的顶层文件夹。
 
-  3. Drive：即存储数据的磁盘，在 MinIO 启动时，以参数的方式传入。Minio 中所有的对象数据都会存储在 Drive 里。
+- Drive：即存储数据的磁盘，在 MinIO 启动时，以参数的方式传入。Minio 中所有的对象数据都会存储在 Drive 里。
 
-  4. Set即一组 Drive 的集合，分布式部署根据集群规模自动划分一个或多个 Set ，每个 Set 中的 Drive 分布在不同位置。一个对象存储在一个 Set 上。（For example: {1…64} is divided into 4 sets each of size 16.）
-
-     一个对象存储在一个Set上
-     一个集群划分为多个Set
-     一个Set包含的Drive数量是固定的，默认由系统根据集群规模自动计算得出
-     一个Set中的Drive尽可能分布在不同的节点上
+- Set即一组 Drive 的集合，分布式部署根据集群规模自动划分一个或多个 Set ，每个 Set 中的 Drive 分布在不同位置。一个对象存储在一个 Set 上。（For example: {1…64} is divided into 4 sets each of size 16.）
+  
+- 一个对象存储在一个Set上  
+  一个集群划分为多个Set  
+  一个Set包含的Drive数量是固定的，默认由系统根据集群规模自动计算得出  
+  一个Set中的Drive尽可能分布在不同的节点上  
 
 2. 部署架构
 
-  1. 单主机，单硬盘模式
+- 单主机，单硬盘模式
 
      ![image-20220903121015693](../_media/image/03-deployment-architecture-diagram/file-service/image-20220903121015693.png)
 
      Minio只在一台服务器上搭建服务，且数据都存在单块磁盘上，该模式存在单点风险，主要用作开发、测试等使用
 
-  2. 单主机，多硬盘模式
+- 单主机，多硬盘模式
 
      ![img](../_media/image/03-deployment-architecture-diagram/file-service/fdcc9ec77a8b617ee184a17cbf2ad96f.png)
 
      Minio在一台服务器上搭建服务，但数据分散在多块（大于4块）磁盘上，提供了数据上的安全保障
 
-  3. 多主机、多硬盘模式（分布式）
+- 多主机、多硬盘模式（分布式）
 
      ![img](../_media/image/03-deployment-architecture-diagram/file-service/c00816f78af3ebdbff368931de2807e3.png)
 
@@ -412,21 +412,21 @@ g. 高可用性，避免单机故障
 
 3. 优势
 
-  1. 数据保护
+- 数据保护
 
      分布式Minio采用 纠删码来防范多个节点宕机和位衰减bit rot。
 
      分布式Minio至少需要4个硬盘，使用分布式Minio自动引入了纠删码功能。
 
-  2. 高可用
+- 高可用
 
      单机Minio服务存在单点故障，相反，如果是一个有N块硬盘的分布式Minio, 只要有N/2硬盘在线，你的数据就是安全的。
 
-  3. 一致性
+- 一致性
 
      Minio在分布式和单机模式下，所有读写操作都严格遵守read-after-write一致性模型
 
-  4. 可靠性
+- 可靠性
 
      Minio使用了Erasure Code 纠删码和 Bit Rot Protection 数据腐化保护，提高数据的可靠性
 
@@ -434,19 +434,19 @@ g. 高可用性，避免单机故障
 
 1. 基础概念
 
-  1. tracker-server
+- tracker-server
 
      跟踪服务器， 主要做调度工作， 起负载均衡的作用。 在内存中记录集群中所有存储组和存储服务器的状态信息， 是客户端和数据服务器交互的枢纽。 相比GFS中的master更为精简， 不记录文件索引信息， 占用的内存量很少。
 
-  2. storage-server
+- storage-server
 
      存储服务器（ 又称：存储节点或数据服务器） ， 文件和文件属性（ metadata） 都保存到存储服务器上。 Storage server直接利用OS的文件系统调用管理文件。
 
-  3. group
+- group
 
      组， 也可称为卷。 同组内服务器上的文件是完全相同的 ，同一组内的storage server之间是对等的， 文件上传、 删除等操作可以在任意一台storage server上进行 。
 
-  4. meta data
+- meta data
 
      meta data：文件相关属性，键值对（ Key Value Pair） 方式，如：width=1024,heigth=768 。
 
@@ -456,11 +456,11 @@ g. 高可用性，避免单机故障
 
 3. 时序图
 
-  1. 文件上传时序图
+- 文件上传时序图
 
      ![image-20220903124157538](../_media/image/03-deployment-architecture-diagram/file-service/image-20220903124157538.png)
 
-  2. 文件下载时序图
+- 文件下载时序图
 
      ![image-20220903124236829](../_media/image/03-deployment-architecture-diagram/file-service/image-20220903124236829.png)
 
@@ -470,42 +470,42 @@ g. 高可用性，避免单机故障
 
 1. 基础概念
 
-  1. Monitor
+- Monitor
      一个Ceph集群需要多个Monitor组成的小集群，它们通过Paxos同步数据，用来保存OSD的元数据。
-  2. OSD
+- OSD
      OSD全称Object Storage Device，也就是负责响应客户端请求返回具体数据的进程。一个Ceph集群一般都有很多个OSD。
-  3. MDS
+- MDS
      MDS全称Ceph Metadata Server，是CephFS服务依赖的元数据服务。
-  4. Object
+- Object
      Ceph最底层的存储单元是Object对象，每个Object包含元数据和原始数据。
-  5. PG
+- PG
      PG全称Placement Grouops，是一个逻辑的概念，一个PG包含多个OSD。引入PG这一层其实是为了更好的分配数据和定位数据。
-  6. RADOS
+- RADOS
      RADOS全称Reliable Autonomic Distributed Object Store，是Ceph集群的精华，用户实现数据分配、Failover等集群操作。
-  7. Libradio
+- Libradio
      Librados是Rados提供库，因为RADOS是协议很难直接访问，因此上层的RBD、RGW和CephFS都是通过librados访问的，目前提供PHP、Ruby、Java、Python、C和C++支持。
-  8. CRUSH
+- CRUSH
      CRUSH是Ceph使用的数据分布算法，类似一致性哈希，让数据分配到预期的地方。
-  9. RBD
+- RBD
      RBD全称RADOS block device，是Ceph对外提供的块设备服务。
-  10. RGW
-      RGW全称RADOS gateway，是Ceph对外提供的对象存储服务，接口与S3和Swift兼容。
-  11. CephFS
-      CephFS全称Ceph File System，是Ceph对外提供的文件系统服务。
+- RGW
+     RGW全称RADOS gateway，是Ceph对外提供的对象存储服务，接口与S3和Swift兼容。
+- CephFS
+     CephFS全称Ceph File System，是Ceph对外提供的文件系统服务。
 
 2. 基本组件
 
-  1. OSD
+- OSD
 
    用于集群中所有数据与对象的存储。处理集群数据的复制、恢复、回填、再均衡。并向其他osd守护进程发送心跳，然后向Mon提供一些监控信息。
 
    当Ceph存储集群设定的数据有两个副本时（一共存两份），则至少需要两个OSD守护进程，即两个OSD节点，集群才能到达active+clean状态。
 
-  2. MDS(可选)
+- MDS(可选)
 
    为Ceph文件系统提供元数据计算、缓存与同步。在Ceph中，元数据也是存储在osd节点中的，mds类似于元数据的代理缓存服务器。MDS进程并不是必须的进程，只有需要使用CephFS时，才需要配置MDS节点。
 
-  3. Monitor
+- Monitor
 
    监控整个集群的状态，维护集群的cluster MAP二进制表，保证集群数据的一致性。ClusterMAP描述了对象块存储的物理位置，以及一个将设备聚合到物理位置的桶列表。
 
@@ -524,16 +524,16 @@ g. 高可用性，避免单机故障
 
 1. 基础概念
 
-  1. Brick（存储块）：
+- Brick（存储块）：
     - 指可信主机池中由主机提供的用于物理存储的专用分区，是GlusterFS中的基本存储单元，同时也是可信存储池中服务器上对外提供的存储目录。
     - 存储目录的格式由服务器和目录的绝对路径构成，表示方法为 SERVER:EXPORT，如 192.168.80.10:/data/mydir/。
-  2. Volume（逻辑卷）：
+- Volume（逻辑卷）：
     - 一个逻辑卷是一组 Brick 的集合。卷是数据存储的逻辑设备，类似于 LVM 中的逻辑卷。大部分 Gluster 管理操作是在卷上进行的。
-  3. FUSE：
+- FUSE：
     - 是一个内核模块，允许用户创建自己的文件系统，无须修改内核代码。
-  4. VFS：
+-  VFS：
     - 内核空间对用户空间提供的访问磁盘的接口。
-  5. Glusterd（后台管理进程）：
+- Glusterd（后台管理进程）：
     - 在存储群集中的每个节点上都要运行。
 
 2. 工作流程
@@ -552,7 +552,7 @@ g. 高可用性，避免单机故障
 
 3. 七种卷类型
 
-  1. 分布式卷
+- 分布式卷
 
      **文件通过 HASH 算法分布到所有 Brick Server 上**，这种卷是 GlusterFS 的默认卷；以文件为单位根据 HASH 算法散列到不同的 Brick，其实只是扩大了磁盘空间，如果有一块磁盘损坏，数据也将丢失，属于文件级的 RAID0， 不具有容错能力。
 
@@ -560,13 +560,13 @@ g. 高可用性，避免单机故障
 
      ![img](../_media/image/03-deployment-architecture-diagram/file-service/202109261916002.png)
 
-  2. 条带卷
+- 条带卷
 
      类似 RAID0，文件被分成数据块并以轮询的方式分布到多个 Brick Server 上，文件存储以数据块为单位，支持大文件存储， 文件越大，读取效率越高，但是不具备冗余性。
 
      ![image-20210924151703550](../_media/image/03-deployment-architecture-diagram/file-service/202109261916004.png)
 
-  3. 复制卷
+- 复制卷
 
      将文件同步到多个 Brick 上，使其具备多个文件副本，属于文件级 RAID 1，具有容错能力。因为数据分散在多个 Brick 中，所以读性能得到很大提升，但写性能下降。
 
@@ -574,7 +574,7 @@ g. 高可用性，避免单机故障
 
      ![image-20210924152742271](../_media/image/03-deployment-architecture-diagram/file-service/202109261916005.png)
 
-  4. 分布式条带卷
+- 分布式条带卷
 
      Brick Server 数量是条带数（数据块分布的 Brick 数量）的倍数，兼具分布式卷和条带卷的特点。 主要用于大文件访问处理**，创建一个分布式条带卷最少需要 4 台服务器。**
 
@@ -582,7 +582,7 @@ g. 高可用性，避免单机故障
 
      File1 和 File2 通过分布式卷的功能分别定位到Server1和 Server2。在 Server1 中，File1 被分割成 4 段，其中 1、3 在 Server1 中的 exp1 目录中，2、4 在 Server1 中的 exp2 目录中。在 Server2 中，File2 也被分割成 4 段，其中 1、3 在 Server2 中的 exp3 目录中，2、4 在 Server2 中的 exp4 目录中。
 
-  5. 分布式复制卷
+- 分布式复制卷
 
      Brick Server 数量是镜像数（数据副本数量）的倍数，兼具分布式卷和复制卷的特点。主要用于需要冗余的情况下。
 
@@ -590,11 +590,11 @@ g. 高可用性，避免单机故障
 
      ![img](../_media/image/03-deployment-architecture-diagram/file-service/202109261916008.png)
 
-  6. 条带复制卷
+- 条带复制卷
 
     - 类似 RAID 10，同时具有条带卷和复制卷的特点。
 
-  7. 分布式条带复制卷
+- 分布式条带复制卷
 
     - 三种基本卷的复合卷，通常用于类 Map Reduce 应用
 
