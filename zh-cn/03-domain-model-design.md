@@ -127,13 +127,13 @@
 
 ### 计费
 
-####资源池管理，计费规则，计费管控
+#### 资源池管理，计费规则，计费管控
 
-#####事件风暴
+##### 事件风暴
 ![](../_media/image/03-domain-model-design/charge-resource/domain-ddd-event-storm.jpg)
-#####提取实体
-![](../_media/image/03-domain-model-design/charge-resource/domain-ddd-event-storm.jpg)
-#####领域模型
+##### 提取实体
+![](../_media/image/03-domain-model-design/charge-resource/domain-entity-extract.jpg)
+##### 领域模型
 ![](../_media/image/03-domain-model-design/charge-resource/domain-charge-resource-001.png)
 
 ## 内容中心
