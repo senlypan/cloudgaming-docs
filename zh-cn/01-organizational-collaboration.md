@@ -39,7 +39,7 @@
 
 - **阶段二：规划设计**
     - 2022-09-08 周四
-        - [20220908-阶段二-云游戏平台部署架构沟通-周六-密码：Bjj3.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=eb95ca93-ed5a-4bba-bb8b-1514bbd46198&from=3)
+        - [20220908-阶段二-云游戏平台部署架构沟通-周四-密码：Bjj3.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=eb95ca93-ed5a-4bba-bb8b-1514bbd46198&from=3)
     - 2022-09-03 周六
         - [20220903-阶段二-云游戏平台部署架构沟通-周六-密码：Hdnw.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=097357e9-ee76-403f-9720-41e87288a86e&from=3)
     - 2022-08-26 周五
