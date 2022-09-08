@@ -133,6 +133,8 @@
 ![](../_media/image/03-domain-model-design/charge-resource/domain-ddd-event-storm.jpg)
 ##### 提取实体
 ![](../_media/image/03-domain-model-design/charge-resource/domain-entity-extract.jpg)
+##### 限界上下文
+![](../_media/image/03-domain-model-design/charge-resource/domain-bounded-context.jpg)
 ##### 领域模型
 ![](../_media/image/03-domain-model-design/charge-resource/domain-charge-resource-001.png)
 

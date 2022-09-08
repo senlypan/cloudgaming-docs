@@ -38,7 +38,9 @@
 !> 视频提取码，请在我们 **微信群** 历史消息中查找，或向组员索要，每期都共享至微信群 
 
 - **阶段二：规划设计**
-    - 2022-09-03 周五
+    - 2022-09-08 周四
+        - [20220908-阶段二-云游戏平台部署架构沟通-周六-密码：Bjj3.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=eb95ca93-ed5a-4bba-bb8b-1514bbd46198&from=3)
+    - 2022-09-03 周六
         - [20220903-阶段二-云游戏平台部署架构沟通-周六-密码：Hdnw.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=097357e9-ee76-403f-9720-41e87288a86e&from=3)
     - 2022-08-26 周五
         - [20220826-阶段二-云游戏平台部署架构沟通（网关中心与任务调度）-周二.mp4 ](https://meeting.tencent.com/v2/cloud-record/share?id=b10cbb04-e8ac-4f14-9338-770d89a715c9&from=3)
