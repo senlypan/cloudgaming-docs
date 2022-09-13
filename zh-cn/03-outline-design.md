@@ -27,9 +27,12 @@
 
 ![](../_media/image/03-outline-design/pay-charge-detail-002.jpg)
 
-### 支付计费模块-资源管理，计费规则，计费管控数据模型
+### 支付计费部分微服务及领域相关
 
-![](../_media/image/03-outline-design/pay-charge-data-model-001.jpg)
+![](../_media/image/03-outline-design/pay-charge-service-ddd.jpg)
+
+
+
 
 ### 数据分析
 
