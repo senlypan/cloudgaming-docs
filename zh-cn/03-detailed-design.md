@@ -59,7 +59,7 @@
 ![](../_media/image/03-detailed-design/pay-charge-resource-buy-001.jpg)
 ##### 说明
 
-###### 资源池管理模块
+###### <font size=15>资源池管理模块</font>
 
 主要功能：管理员的查询，录入，修改，删除。客户选购查询，锁定，解锁，扣减。
 
