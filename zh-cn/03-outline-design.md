@@ -69,6 +69,19 @@
 | 8    | 更新人| modify_user |      String            | 否           |   
 | 9    | 页码 | page |      Integer            | 否           |   
 | 10    | 页数 | size |      Integer            | 否           |   
+ **返回参数**
+ 
+ | 编号 | 名称       | 字段       | 类型                 | 是否必填     | 描述                                                    |
+ | ---- | -------- | ---------- | -------------------- | ------------ | ------------------------------------------------------- |
+ | 1    | 事件类型   | type       |      Integer         | 否           |                                                         |
+ | 2    | 事件名称   | name        |      Integer         | 否          |                                                         |
+ | 3    | 所属领域   | domain       |      String          | 否          |                                                         |
+ | 4    | 描述      | description |      String         | 否           |                                                         |
+ | 5    | 创建时间| create_time |      Date            | 否           |   
+ | 6    | 更新时间| modify_time |      Date            | 否           |   
+ | 7    | 创建人| create_user |      String            | 否           |   
+ | 8    | 更新人| modify_user |      String            | 否           |   
+
  **请求示例**：
  
  **返回示例**：
